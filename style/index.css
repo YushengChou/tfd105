@@ -1,19 +1,132 @@
-
-h1{
-    color: red;
+.base {
+    margin: 20px 0;
 }
 
-h1:hover{
-    color: blue;
+.btn {
+    border: 0;
+    padding: 0;
+    cursor: pointer;
 }
 
-/* .circle{
-    width: 60px;
-    height: 60px;
-    background: #000;
+/* -----carousel-begin----- */
+.base-carousel .container {
+    position: relative;
+}
+
+.base-carousel .btn {
     position: absolute;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    transition: 0.5s;
-} */
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    border: 25px solid;
+    background-color: transparent;
+}
 
+.btn.carousel_prev {
+    border-color: transparent #F4ECDC transparent transparent;
+    left: 0;
+}
+
+.btn.carousel_next {
+    border-color: transparent transparent transparent #F4ECDC;
+    right: 0;
+}
+
+.btn.carousel_prev:hover {
+    border-color: transparent #EC7801 transparent transparent;
+}
+
+.btn.carousel_next:hover{
+    border-color: transparent transparent transparent #EC7801;
+}
+
+/* -----carousel-end----- */
+
+/* -----intro-begin----- */
+.base-intro h3{
+    text-align: center;
+    margin: 40px 0;
+    color: #EC7801;
+}
+
+.intro_item {
+    display: flex;
+}
+
+.intro_item+.intro_item {
+    margin-top: 20px;
+}
+
+.intro_item_content {
+    padding: 20px 40px;
+}
+
+.base-intro .intro_item h3 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #EC7801;
+}
+
+.base-intro .intro_item h4 {
+    margin-bottom: 20px;
+    color: #643D2F;
+}
+
+/* -----intro-end----- */
+
+/* -----peoduct-begin----- */
+.base-product h3{
+    text-align: center;
+    padding: 20px 0;
+    color: #EC7801;
+}
+
+.product_list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.product_item {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.product_item a{
+    text-decoration: none;
+}
+
+.product_pic{
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.product_item img {
+    background-color: #F4ECDC;
+    transition: .8s;
+}
+
+.product_item h4 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.product_item p{
+    color: #643D2F;
+}
+
+.product_item:hover img{
+    transform: scale(1.3);
+}
+
+.product_item:hover h4{
+    color: #643D2F;
+}
+
+.product_item:hover p{
+    color: #EC7801;
+}
+
+/* -----peoduct-end----- */
