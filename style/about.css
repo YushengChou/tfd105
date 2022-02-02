@@ -1,0 +1,82 @@
+/* -----banner-begin----- */
+.base-banner{
+    position: relative;
+    margin-bottom: 140px;
+}
+
+.banner_content{
+    position: absolute;
+    bottom: -150px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 1000px;
+    padding: 50px 100px;
+    text-align: center;
+    background-color: #F4ECDC;
+}
+
+.banner_content h2{
+    color: #EC7801;
+}
+
+.banner_content h5{
+    margin: 40px 0;
+    color: #333;
+}
+
+.banner_content p{
+    color: #643D2F;
+    line-height: 1.5;
+}
+/* -----banner-end----- */
+
+/* -----chef-begin----- */
+.base-chef img{
+    border-radius: 50%;
+}
+
+.chef_list{
+    display: flex;
+    justify-content: space-between;
+}
+
+.chef_item{
+    width: 250px;
+}
+
+.chef_item h5{
+    text-align: center;
+    margin: 20px 0;
+    color: #333;
+}
+
+.chef_item p{
+    color: #643D2F;
+}
+
+.base-chef h3 {
+    text-align: center;
+    padding: 40px 0;
+    color: #EC7801;
+}
+
+/* -----chef-end----- */
+
+/* -----place-brgin----- */
+.base-place .container{
+    display: flex;
+}
+
+.base-place .container div:first-child{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 40px 80px;
+}
+
+.base-place .container div{
+    width: 50%;
+    background-color: #F4ECDC;
+}
+/* -----place-end----- */

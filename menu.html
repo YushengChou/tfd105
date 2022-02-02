@@ -5,59 +5,245 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>MENU</title>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="./style/all.css">
-    <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet" href="./style/menu.css">
 </head>
 
 <body>
-    <!-- <div class="circle" id="Circle"></div> -->
-    <header>
-        <nav class="nav">
+    <form class="member" id="Member">
+        <div class="member_form">
+            <button type="button" class="btn btn-close" id="BtnClose">x</button>
+            <div class="member_box">
+                <h4>SIGN IN </h4>
+                <div>
+                    <label for="LoginId">USERID</label>
+                    <input type="text" id="LoginId">
+                </div>
+                <div>
+                    <label for="pw">PASSWORD</label>
+                    <input type="text" id="Pw">
+                </div>
+                <a href="#">FORGET YOUR PASSWORD?</a>
+                <input type="submit" value="OK">
+            </div>
+            <div class="member_box">
+                <h4>SIGN UP</h4>
+                <div>
+                    <label for="UserId">USERID</label>
+                    <input type="text" id="UserId" value="">
+                </div>
+                <div>
+                    <label for="PassWord">PASSWORD</label>
+                    <input type="password" id="PassWord" value="">
+                </div>
+                <div>
+                    <label for="CfPw">CONFIRM PASSWORD</label>
+                    <input type="text" id="CfPw">
+                </div>
+                <div>
+                    <label for="Email">EMAIL</label>
+                    <input type="text" id="Email">
+                </div>
+                <input type="submit" value="OK" id="SuOk">
+            </div>
+            <div class="member_box member_slide">
+                <h4>DON’T HAVE AN ACCOUNT?</h4>
+                <h4>ALREADY HAVE AN ACCOUNT?</h4>
+                <p>Register now to enjoy all the rewards and deals for being a member!</p>
+                <p>Login now to enjoy the food!</p>
+                <button type="button" class="btn btn-signup" id="SignUp">SIGN UP</button>
+                <button type="button" class="btn btn-signin" id="SignIn">SIGN IN </button>
+            </div>
+        </div>
+    </form>
+
+    <header class="navbar">
+        <nav class="nav" id="Nav">
             <div class="container">
                 <div class="nav_head">
-                    <a href="#">
+                    <a href="./index.html">
                         <img class="logo_b" src="./img/logo.png" width="50" height="50" alt="logo_img">
                         <img class="logo_w" src="./img/logo-l.png" width="50" height="50" alt="logo-l_img">
                     </a>
                 </div>
                 <h1>FRASH BURGER</h1>
                 <ul class="nav_list">
-
                     <li class="nav_item">
-                        <a href="#">
+                        <a href="#More">
+                            MORE
+                        </a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="./menu.html">
                             MENU
                         </a>
                     </li>
                     <li class="nav_item">
-                        <a href="#">
+                        <a href="./news.html">
                             NEWS
                         </a>
                     </li>
                     <li class="nav_item">
-                        <a href="#">
+                        <a href="./about.html">
                             ABOUT
                         </a>
                     </li>
                     <li class="nav_item">
-                        <a href="#">
+                        <a href="./faq.html">
                             FAQ
                         </a>
                     </li>
-                    <li class="nav_item">
+                    <li class="nav_item" id="MemberBtn">
                         <a href="#">
                             <i class="fas fa-user"></i>
+                        </a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="#More">
+                            <i class="fas fa-heart"></i>
+                            <span class="nav_count" id="NavCount"></span>
                         </a>
                     </li>
                 </ul>
             </div>
         </nav>
-
     </header>
 
-    
+    <aside class="aside_bar" id="AsideBar">
+        <a href="#">
+            <i class="fab fa-facebook-messenger"></i>
+        </a>
+        <a href="#"></a>
+    </aside>
+
+    <section class="base base-product">
+        <div class="container">
+            <ul class="btn_list">
+                <li class="btn_item">
+                    <button class="btn">BEEF</button>
+                </li>
+                <li class="btn_item">
+                    <button class="btn">PORK</button>
+                </li>
+                <li class="btn_item">
+                    <button class="btn">CHICKEN</button>
+                </li>
+                <li class="btn_item">
+                    <button class="btn">VEGETABLE</button>
+                </li>
+            </ul>
+            <ul class="product_list">
+                <li class="product_item">
+                    <a href="#">
+                        <div class="product_pic">
+                            <img src="./img/product1.png" width="350" height="250" alt="product_1">
+                        </div>
+                        <h4>NAME</h4>
+                        <p>1000 cal</p>
+                    </a>
+                </li>
+                <li class="product_item">
+                    <a href="#">
+                        <div class="product_pic">
+                            <img src="./img/product2.png" width="350" height="250" alt="product_2">
+                        </div>
+                        <h4>NAME</h4>
+                        <p>1000 cal</p>
+                    </a>
+                </li>
+                <li class="product_item">
+                    <a href="#">
+                        <div class="product_pic">
+                            <img src="./img/product3.png" width="350" height="250" alt="product_3">
+                        </div>
+                        <h4>NAME</h4>
+                        <p>1000 cal</p>
+                    </a>
+                </li>
+                <li class="product_item">
+                    <a href="#">
+                        <div class="product_pic">
+                            <img src="./img/product4.png" width="350" height="250" alt="product_4">
+                        </div>
+                        <h4>NAME</h4>
+                        <p>1000 cal</p>
+                    </a>
+                </li>
+                <li class="product_item">
+                    <a href="#">
+                        <div class="product_pic">
+                            <img src="./img/product5.png" width="350" height="250" alt="product_5">
+                        </div>
+                        <h4>NAME</h4>
+                        <p>1000 cal</p>
+                    </a>
+                </li>
+                <li class="product_item">
+                    <a href="#">
+                        <div class="product_pic">
+                            <img src="./img/product6.png" width="350" height="250" alt="product_6">
+                        </div>
+                        <h4>NAME</h4>
+                        <p>1000 cal</p>
+                    </a>
+                </li>
+                <li class="product_item">
+                    <a href="#">
+                        <div class="product_pic">
+                            <img src="./img/product7.png" width="350" height="250" alt="product_7">
+                        </div>
+                        <h4>NAME</h4>
+                        <p>1000 cal</p>
+                    </a>
+                </li>
+                <li class="product_item">
+                    <a href="#">
+                        <div class="product_pic">
+                            <img src="./img/product8.png" width="350" height="250" alt="product_8">
+                        </div>
+                        <h4>NAME</h4>
+                        <p>1000 cal</p>
+                    </a>
+                </li>
+                <li class="product_item">
+                    <a href="#">
+                        <div class="product_pic">
+                            <img src="./img/product9.png" width="350" height="250" alt="product_9">
+                        </div>
+                        <h4>NAME</h4>
+                        <p>1000 cal</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="base base-more" id="More">
+        <div class="container">
+            <h3>MORE...</h3>
+            <ul class="more_list" id="MoreList">
+                <li class="more_item">
+                    <i class="far fa-heart more_count"></i>
+                    <i class="fas fa-heart more_count"></i>
+                </li>
+                <li class="more_item">
+                    <i class="far fa-heart more_count"></i>
+                    <i class="fas fa-heart more_count"></i>
+                </li>
+                <li class="more_item">
+                    <i class="far fa-heart more_count"></i>
+                    <i class="fas fa-heart more_count"></i>
+                </li>
+                <li class="more_item">
+                    <i class="far fa-heart more_count"></i>
+                    <i class="fas fa-heart more_count"></i>
+                </li>
+            </ul>
+        </div>
+    </section>
 
     <section class="insta container">
         <ul class="insta_list">
@@ -107,7 +293,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer_head">
-                <a href="#">
+                <a href="./index.html">
                     <img class="logo_b" src="./img/logo.png" width="50" height="50" alt="logo_img">
                     <img class="logo_w" src="./img/logo-l.png" width="50" height="50" alt="logo-l_img">
                 </a>
@@ -134,7 +320,8 @@
             </ul>
         </div>
     </footer>
-    <script src="./js/index.js"></script>
+
+    <script src="./js/all.js"></script>
 </body>
 
 </html>
