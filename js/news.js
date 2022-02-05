@@ -2,8 +2,8 @@
 
 // 分類篩選
 let btn_item = document.getElementsByClassName('btn_item');
-let news_type = document.querySelectorAll('.news_type');
-let news_item = document.querySelectorAll('.news_item');
+let news_type = document.getElementsByClassName('news_type');
+let news_item = document.getElementsByClassName('news_item');
 for (let i = 0; i < btn_item.length; i++) {
     btn_item[i].addEventListener('click', function () {
         let click_choose = (btn_item[i].textContent).trim();

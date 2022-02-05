@@ -65,31 +65,3 @@ member_btn.addEventListener('click', function () {
 btn_close.addEventListener('click', function () {
     member.classList.add('js-none');
 })
-
-/*
-// 註冊存取資料
-let user_id = document.getElementById('UserId');
-let user_pw = document.getElementById('PassWord');
-let su_ok = document.getElementById('SuOk');
-// 取得輸入ID
-user_id.addEventListener('change', function () {
-    // console.log(user_id.value);
-})
-// 取得輸入密碼
-user_pw.addEventListener('change', function () {
-    // console.log(user_pw.value);
-})
-// 存取帳號密碼
-su_ok.addEventListener('click', function () {
-    let user_acc = user_id.value;
-    let user_pwd = user_pw.value;
-    if (localStorage.getItem('userid')!= null) {
-        alert('acc已存在')
-    } else {
-        localStorage.setItem('userid', user_acc)
-        localStorage.setItem('userpw', user_pwd)
-    }
-})
-localStorage.removeItem('userid');
-localStorage.removeItem('userpw');
-*/

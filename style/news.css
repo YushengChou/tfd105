@@ -34,12 +34,13 @@
 .news_list {
     display: flex;
     flex-wrap: wrap;
-    justify-content:space-between;
+    margin-right: -75px;
 }
 
 .news_item {
     width: 350px;
     text-align: center;
+    margin-right: 75px;
     margin-bottom: 20px;
 }
 
@@ -77,4 +78,3 @@
 }
 
 /* -----news-end----- */
-

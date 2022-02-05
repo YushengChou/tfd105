@@ -1,0 +1,44 @@
+/* -----product-begin----- */
+.base-product .container{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px 0;
+}
+
+.product_head{
+    background-color: #F4ECDC;
+}
+
+.product_body{
+    width: 500px;
+    padding: 20px 40px;
+}
+
+.product_body p{
+    margin: 20px 0;
+    color: #EC7801;
+}
+
+.product_body span{
+    color: #643D2F;
+}
+
+.product_body h4{
+    margin: 40px 0;
+    color: #EC7801;
+}
+
+.source_item{
+    margin-bottom: 40px;
+    font-size: 24px;
+}
+
+.source_item i{
+    margin-right: 20px;
+    transition: .5s;
+}
+
+.source_item:hover i{
+    transform: translateX(20px) rotate(360deg);
+}
+/* -----product-end----- */

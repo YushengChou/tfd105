@@ -45,6 +45,14 @@
     width: 250px;
 }
 
+.chef_item img{
+    transition: .8s;
+}
+
+.chef_item:hover img{
+    transform: scaleX(-1);
+}
+
 .chef_item h5{
     text-align: center;
     margin: 20px 0;

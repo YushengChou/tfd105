@@ -81,6 +81,7 @@
 .info {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .info_head {
@@ -116,6 +117,18 @@
     outline: 0;
     border: 0;
     background-color: #F4ECDC;
+}
+
+.info .btn-ok{
+    margin: 20px auto;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #F4ECDC;
+    background-color: #EC7801;
+}
+
+.info .btn-ok:hover{
+    background-color: #643D2F;
 }
 
 /* -----info-end----- */
