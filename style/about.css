@@ -74,6 +74,7 @@
 /* -----place-brgin----- */
 .base-place .container{
     display: flex;
+    overflow: hidden;
 }
 
 .base-place .container div:first-child{

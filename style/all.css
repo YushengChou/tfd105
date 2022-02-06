@@ -620,4 +620,21 @@ a:hover .logo_w {
     background-color: #EC7801;
 }
 
+.js-slide{
+    opacity: 0;
+    transition: .8s;
+}
+
+.js-slide-l{
+    transform: translateX(-30%);
+}
+
+.js-slide-r{
+    transform: translateX(30%);
+}
+
+.js-active{
+    transform: translate(0);
+    opacity: 1;
+}
 /* -----js-end----- */

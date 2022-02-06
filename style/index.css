@@ -1,6 +1,10 @@
 
 
 /* -----carousel-begin----- */
+.base-carousel{
+    position: relative;
+}
+
 .base-carousel .container {
     position: relative;
 }
@@ -10,28 +14,77 @@
     top: 0;
     bottom: 0;
     margin: auto;
-    width: 50px;
-    height: 50px;
-    border: 25px solid;
+    width: 30px;
+    height: 30px;
+    border: 5px solid;
+    border-color: #F4ECDC #F4ECDC transparent transparent;
     background-color: transparent;
 }
 
 .btn.carousel_prev {
-    border-color: transparent #F4ECDC transparent transparent;
-    left: 0;
+    left: 10px;
+    transform: rotate(-135deg);
 }
 
 .btn.carousel_next {
-    border-color: transparent transparent transparent #F4ECDC;
+    right: 10px;
+    transform: rotate(45deg);
+}
+
+.base-carousel .btn:hover{
+    border-color: #EC7801 #EC7801 transparent transparent;
+}
+
+.base-carousel::before{
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 1;
+    left: 0;
     right: 0;
+    bottom: 10px;
+    margin: auto;
+    width: 0;
+    height: 0;
+    border: 15px solid;
+    border-color: #333 transparent transparent transparent;
+    background-color: transparent;
+    animation: arrow 2s linear infinite;
 }
 
-.btn.carousel_prev:hover {
-    border-color: transparent #EC7801 transparent transparent;
+.base-carousel::after{
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    bottom: -10px;
+    margin: auto;
+    width: 0;
+    height: 0;
+    border: 15px solid;
+    border-color: #333 transparent transparent transparent;
+    background-color: transparent;
+    animation: arrow 2s linear infinite;
 }
 
-.btn.carousel_next:hover{
-    border-color: transparent transparent transparent #EC7801;
+@keyframes arrow{
+    0%{
+        opacity: 1;
+        transform: translateY(0);
+        border-color: #F4ECDC transparent transparent transparent;
+    }
+    50%{
+        opacity: 1;
+        transform: translateY(30px);
+        border-color: #333 transparent transparent transparent;
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+        border-color: #F4ECDC transparent transparent transparent;
+    }
 }
 
 /* -----carousel-end----- */
@@ -45,6 +98,7 @@
 
 .intro_item {
     display: flex;
+    overflow: hidden;
 }
 
 .intro_item+.intro_item {

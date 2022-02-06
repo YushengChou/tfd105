@@ -30,6 +30,7 @@ for (let i = 0; i < more_item.length; i++) {
             // 若有class移除並-1
             collect_count.innerHTML = '';
             collect_count.innerHTML = count;
+            // 清空收藏數字
             if (count === 0) {
                 collect_count.innerHTML = '';
             }
@@ -65,3 +66,20 @@ member_btn.addEventListener('click', function () {
 btn_close.addEventListener('click', function () {
     member.classList.add('js-none');
 })
+
+
+// 滑入
+let slideBlocks = document.getElementsByClassName('js-slide');
+
+function doScroll() {
+    // Y軸高度
+    let dY = window.pageYOffset;
+    for (let i = 0; i < slideBlocks.length; i++) {
+        if (dY > slideBlocks[i].offsetTop / 2) {
+            slideBlocks[i].classList.add('js-active')
+        } else {
+            slideBlocks[i].classList.remove('js-active')
+        }
+    }
+}
+window.addEventListener('scroll', doScroll);
