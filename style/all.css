@@ -189,6 +189,7 @@ a:hover .logo_w {
     transition: .8s;
     opacity: 0;
     pointer-events: none;
+    z-index: 1;
 }
 
 .aside_bar a {
