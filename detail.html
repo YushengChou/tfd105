@@ -5,15 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEWS</title>
+    <title>NEWS DETAIL</title>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="./style/all.css">
-    <link rel="stylesheet" href="./style/news.css">
+    <link rel="stylesheet" href="./style/detail.css">
 </head>
 
 <body>
+
     <form class="member" id="Member">
         <div class="member_form">
             <button type="button" class="btn btn-close" id="BtnClose">x</button>
@@ -120,26 +121,29 @@
         <a href="#"></a>
     </aside>
 
-    <section class="base base-banner">
-        <img src="./img/news-banner1.jpg" alt="news_banner" width="1440" height="500">
+    <section class="base base-detail">
+        <div class="container">
+            <h2>NEW YEAR DISCOUNT</h2>
+            <img src="./img/detail-img.png" width="1200" height="500" alt="detail-img">
+            <span>2022/01/01</span>
+            <p>
+                Say goodbye to 2021 and welcome 2022 with some freebies and deals.
+
+                Krispy Kreme ends 2021 with the last day of its vaccination incentive and is ringing in 2022 with a
+                sweet doughnut deal dubbed "Raise a Glazed." Now through Sunday, get two Original Glazed dozens for $12.
+
+                Despite a shortage of sparkling wine looming, New Year's Eve also is National Champagne Day. New Year's
+                Day is National Bloody Mary Day and National Hangover Day.
+
+                Wendy's National Bacon Day deal of free Baconator Fries also continues through Sunday.
+
+                We've rounded up deals and ongoing offers available at restaurants nationwide this weekend.
+            </p>
+        </div>
     </section>
 
     <section class="base base-news">
         <div class="container">
-            <ul class="btn_list">
-                <li class="btn_item">
-                    <button class="btn">ALL</button>
-                </li>
-                <li class="btn_item">
-                    <button class="btn">POST</button>
-                </li>
-                <li class="btn_item">
-                    <button class="btn">NEWS</button>
-                </li>
-                <li class="btn_item">
-                    <button class="btn">DISCOUNT</button>
-                </li>
-            </ul>
             <ul class="news_list">
                 <li class="news_item">
                     <img src="./img/news-1.png" width="350" height="350" alt="news_pic">
@@ -330,7 +334,6 @@
     </footer>
 
     <script src="./js/all.js"></script>
-    <script src="./js/news.js"></script>
 </body>
 
 </html>
