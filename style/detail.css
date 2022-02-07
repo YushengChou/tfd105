@@ -31,6 +31,12 @@
 /* -----detail-end----- */
 
 /* -----news-begin----- */
+.base-news h3{
+    text-align: center;
+    padding: 40px 0;
+    color: #EC7801;
+}
+
 .news_list {
     display: flex;
     flex-wrap: wrap;
