@@ -49,10 +49,10 @@ let sign_up = document.getElementById('SignUp');
 let sign_in = document.getElementById('SignIn');
 let member_slide = document.getElementsByClassName('member_slide')[0];
 sign_up.addEventListener('click', function () {
-    member_slide.classList.toggle('js-mbactive')
+    member_slide.classList.toggle('js-mbactive');
 })
 sign_in.addEventListener('click', function () {
-    member_slide.classList.toggle('js-mbactive')
+    member_slide.classList.toggle('js-mbactive');
 })
 
 // 登入註冊展開關閉
@@ -66,7 +66,11 @@ member_btn.addEventListener('click', function () {
 btn_close.addEventListener('click', function () {
     member.classList.add('js-none');
 })
-
+window.addEventListener('click', function(e){
+    if(e.target === member){
+        member.classList.add('js-none');
+    }
+})
 
 // 滑入
 let slideBlocks = document.getElementsByClassName('js-slide');
@@ -76,10 +80,25 @@ function doScroll() {
     let dY = window.pageYOffset;
     for (let i = 0; i < slideBlocks.length; i++) {
         if (dY > slideBlocks[i].offsetTop / 2) {
-            slideBlocks[i].classList.add('js-active')
+            slideBlocks[i].classList.add('js-active');
         } else {
-            slideBlocks[i].classList.remove('js-active')
+            slideBlocks[i].classList.remove('js-active');
         }
     }
 }
 window.addEventListener('scroll', doScroll);
+
+// 漢堡選單
+let nav_btn = document.getElementById('NavBtn');
+let nav_close = document.getElementById('NavClose');
+let nav_body = document.getElementById('NavBody');
+nav_btn.addEventListener('click', function () {
+    nav_btn.classList.toggle('js-none');
+    nav_close.classList.toggle('js-none');
+    nav_body.classList.add('js-active');
+})
+nav_close.addEventListener('click', function(){
+    nav_btn.classList.toggle('js-none');
+    nav_close.classList.toggle('js-none');
+    nav_body.classList.remove('js-active');
+})

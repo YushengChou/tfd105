@@ -55,7 +55,7 @@ img {
 }
 
 .container {
-    width: 1200px;
+    max-width: 1200px;
     margin: auto;
 }
 
@@ -176,6 +176,18 @@ a:hover .logo_w {
     top: -15px;
     left: 40px;
     color: red;
+}
+
+.nav_btn {
+    display: none;
+    align-items: center;
+    font-size: 24px;
+    color: #EC7801;
+    text-decoration: none;
+}
+
+.nav_btn:hover {
+    color: #643D2F;
 }
 
 /* -----header-end----- */
@@ -318,6 +330,10 @@ a:hover .logo_w {
 .insta_item {
     position: relative;
     overflow: hidden;
+}
+
+.insta_item a {
+    display: block;
 }
 
 .insta_item::before {
@@ -570,6 +586,45 @@ a:hover .logo_w {
 
 /* -----banner-end----- */
 
+/* -----rwd-begin(max-width:991.98px)----- */
+@media screen and (max-width: 991.98px) {
+    .container {
+        max-width: 960px;
+    }
+
+    /* -----navbar-begin----- */
+    .nav_btn {
+        display: flex;
+        height: 80px;
+    }
+
+    .nav_list {
+        flex-direction: column;
+        margin: 0 auto;
+        width: 100%;
+        height: auto;
+    }
+
+    .nav_item {
+        width: 80px;
+    }
+
+    .nav_body {
+        position: absolute;
+        top: 80px;
+        width: 100%;
+        transition: .5s;
+        transform: translateX(100%);
+        opacity: 0;
+        background-color: rgba(0, 0, 0, .6);
+    }
+
+    /* -----navbar-end----- */
+
+}
+
+/* -----rwd-end(max-width:991.98px)----- */
+
 /* -----js-begin----- */
 .js-block {
     display: block;
@@ -620,21 +675,22 @@ a:hover .logo_w {
     background-color: #EC7801;
 }
 
-.js-slide{
+.js-slide {
     opacity: 0;
     transition: .8s;
 }
 
-.js-slide-l{
+.js-slide-l {
     transform: translateX(-30%);
 }
 
-.js-slide-r{
+.js-slide-r {
     transform: translateX(30%);
 }
 
-.js-active{
+.js-active {
     transform: translate(0);
     opacity: 1;
 }
+
 /* -----js-end----- */
