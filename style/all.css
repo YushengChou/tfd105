@@ -653,6 +653,11 @@ a:hover .logo_w {
         opacity: 0;
         background-color: rgba(0, 0, 0, .6);
     }
+
+    .nav_count {
+        top: -20px;
+        left: 50px;
+    }
     /* -----navbar-end----- */
 
     /* -----instr-begin----- */
