@@ -1,5 +1,3 @@
-
-
 /* -----carousel-begin----- */
 .base-carousel{
     position: relative;
@@ -121,3 +119,11 @@
 }
 
 /* -----intro-end----- */
+
+/* -----rwd-begin(max-width:1199.98px)----- */
+@media screen and (max-width: 1199.98px) {
+    .intro_item {
+        flex-direction: column;
+    }
+}
+/* -----rwd-end(max-width:1199.98px)----- */

@@ -267,17 +267,18 @@ a:hover .logo_w {
 
 .more_list {
     display: flex;
-    height: 250px;
 }
 
 .more_item {
-    flex-grow: 1;
+    /* flex-grow: 1; */
     background-image: url('../img/product1.png');
     background-size: cover;
     background-position: center center;
     transition: .5s;
     cursor: pointer;
     position: relative;
+    width: 300px;
+    height: 250px;
 }
 
 .more_item+.more_item {
@@ -290,10 +291,6 @@ a:hover .logo_w {
 
 .more_item+.more_item+.more_item+.more_item {
     background-image: url('../img/product4.png')
-}
-
-.more_item:hover {
-    flex-grow: 2;
 }
 
 .more_count {
@@ -314,7 +311,7 @@ a:hover .logo_w {
 }
 
 .more_item:hover .more_count {
-    right: 100px;
+    color: #EC7801;
 }
 
 /* -----more-end----- */
@@ -658,10 +655,12 @@ a:hover .logo_w {
     }
     /* -----navbar-end----- */
 
-    /* -----footer-begin----- */
-
-    /* -----footer-end----- */
-
+    /* -----instr-begin----- */
+    .more_list {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    /* -----instr-end----- */
 
 }
 
