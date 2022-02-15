@@ -668,11 +668,30 @@ a:hover .logo_w {
     /* -----instr-end----- */
 
 }
-
 /* -----rwd-end(max-width:1199.98px)----- */
 
-/* -----rwd-begin(max-width:767.98px)----- */
-@media screen and (max-width: 767.98px) {
+/* -----rwd-begin(max-width:959.98px)----- */
+@media screen and (max-width: 959.98px) {
+
+    /* -----member-begin----- */
+    .member_form {
+        width: 600px;
+        margin-top: 50px;
+    }
+    .member_box {
+        width: 300px;
+        padding: 20px 30px;
+    }
+    .member .js-mbactive {
+        transform: translateX(-300px);
+    }
+    /* -----member-end----- */
+}
+/* -----rwd-end(max-width:959.98px)----- */
+
+/* -----rwd-begin(max-width:768px)----- */
+@media screen and (max-width: 768px) {
+    /* -----footer-begin----- */
     .footer_foot .footer_item:first-child {
         flex-grow: 0;
     }
@@ -680,11 +699,34 @@ a:hover .logo_w {
     .footer_body .footer_list {
         width: 250px;
     }
+    /* -----footer-end----- */
+
+    /* -----member-begin----- */
+    .member_form {
+        flex-direction: column;
+        align-items: center;
+    }
+    .member_slide {
+        height: 375px;
+        right: 150px;
+        top: 280px;
+    }
+    .member .js-mbactive {
+        transform: translateY(-280px);
+    }
+    .member_slide.js-mbactive {
+        height: 280px;
+    }
+    .btn-close {
+        right: 150px;
+    }
+    /* -----member-end----- */
 }
-/* -----rwd-end(max-width:767.98px)----- */
+/* -----rwd-end(max-width:768px)----- */
 
 /* -----rwd-begin(max-width:575.98px)----- */
 @media screen and (max-width: 575.98px) {
+    /* -----footer-begin----- */
     .footer .container {
         align-items: center;
         flex-direction: column;
@@ -705,6 +747,19 @@ a:hover .logo_w {
     .footer_foot .footer_list {
         justify-content: center;
     }
+    /* -----footer-end----- */
+
+    /* -----member-begin----- */
+    .member_form {
+        width: 400px;
+    }
+    .member_slide {
+        right: 50px;
+    }
+    .btn-close {
+        right: 50px;
+    }
+    /* -----member-end----- */
 }
 /* -----rwd-end(max-width:575.98px)----- */
 
