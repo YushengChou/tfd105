@@ -42,12 +42,12 @@
     border-color: transparent transparent transparent #EC7801;
     position: absolute;
     top: 30px;
-    right: -45px;
+    right: -40px;
 }
 
 .faq_item:nth-child(even) .faq_num::before {
     border-color: transparent #EC7801 transparent transparent;
-    right: 235px;
+    right: 240px;
 }
 
 .faq_item:nth-child(even) .btn-close {
