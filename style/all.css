@@ -730,6 +730,10 @@ a:hover .logo_w {
     background-color: rgba(244, 236, 220, .6);
 }
 
+.js-btnbgc {
+    background-color: #EC7801;
+}
+
 .js-rotate {
     transform: rotate(45deg);
 }

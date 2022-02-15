@@ -5,6 +5,20 @@
 
 .base-carousel .container {
     position: relative;
+    overflow: hidden;
+}
+
+.carousel_list {
+    position: relative;
+    left: 0;
+    display: flex;
+    width: 4800px;
+    transition: .5s;
+}
+
+.carousel_item {
+    position: relative;
+    width: 1200px;
 }
 
 .base-carousel .btn {
@@ -15,7 +29,7 @@
     width: 30px;
     height: 30px;
     border: 5px solid;
-    border-color: #F4ECDC #F4ECDC transparent transparent;
+    border-color: #EC7801 #EC7801 transparent transparent;
     background-color: transparent;
 }
 
@@ -30,7 +44,7 @@
 }
 
 .base-carousel .btn:hover{
-    border-color: #EC7801 #EC7801 transparent transparent;
+    border-color: #643D2F #643D2F transparent transparent;
 }
 
 .base-carousel::before{
@@ -65,6 +79,27 @@
     border-color: #333 transparent transparent transparent;
     background-color: transparent;
     animation: arrow 2s linear infinite;
+}
+
+.dot_list {
+    display: flex;
+    justify-content: center;
+    transform: translateY(-40px);
+    z-index: 2;
+}
+
+.dot_item {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.dot_btn {
+    padding: 3px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    outline: 0;
+    /* background-color: transparent; */
+    cursor: pointer;
 }
 
 @keyframes arrow{

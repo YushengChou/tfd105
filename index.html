@@ -131,13 +131,36 @@
 
     <section class="base base-carousel">
         <div class="container">
-            <ul class="carousel_list">
+            <ul class="carousel_list" id="CaroList" style="left: 0;">
                 <li class="carousel_item">
-                    <img src="./img/carousel-1.png" width="1200" height="500" alt="carousel_img">
+                    <img src="./img/carousel-1.jpg" width="1200" height="500" alt="carousel_img">
+                </li>
+                <li class="carousel_item">
+                    <img src="./img/carousel-2.png" width="1200" height="500" alt="carousel_img">
+                </li>
+                <li class="carousel_item">
+                    <img src="./img/carousel-3.jpg" width="1200" height="500" alt="carousel_img">
+                </li>
+                <li class="carousel_item">
+                    <img src="./img/carousel-4.jpg" width="1200" height="500" alt="carousel_img">
                 </li>
             </ul>
-            <button class="btn carousel_prev"></button>
-            <button class="btn carousel_next"></button>
+            <ul class="dot_list">
+                <li class="dot_item">
+                    <button class="dot_btn"></button>
+                </li>
+                <li class="dot_item">
+                    <button class="dot_btn"></button>
+                </li>
+                <li class="dot_item">
+                    <button class="dot_btn"></button>
+                </li>
+                <li class="dot_item">
+                    <button class="dot_btn"></button>
+                </li>
+            </ul>
+            <button class="btn carousel_prev" id="PrevSlide"></button>
+            <button class="btn carousel_next" id="NextSlide"></button>
         </div>
     </section>
 
@@ -286,6 +309,7 @@
     </footer>
 
     <script src="./js/all.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 
 </html>
