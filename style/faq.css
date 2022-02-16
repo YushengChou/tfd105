@@ -65,8 +65,10 @@
 }
 
 .faq_a {
+    transition: .5s;
     background-color: #EC7801;
-    padding: 40px 100px;
+    overflow: hidden;
+    max-height: 0;
 }
 
 /* -----faq-end----- */
