@@ -98,3 +98,20 @@
 }
 
 /* -----news-end----- */
+
+/* -----rwd-begin(max-width:1319.98px)----- */
+@media screen and (max-width: 1319.98px) {
+
+    /* -----news-begin----- */
+    .news_list {
+        margin-right: 0;
+        justify-content: center;
+    }
+
+    .news_item {
+        margin-right: 20px;
+    }
+    /* -----news-end----- */
+}
+
+/* -----rwd-end(max-width:1319.98px)----- */

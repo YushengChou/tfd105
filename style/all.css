@@ -616,6 +616,7 @@ a:hover .logo_w {
         width: 250px;
         height: 250px;
     }
+
     /* -----insta-end----- */
 }
 
@@ -658,6 +659,7 @@ a:hover .logo_w {
         top: -20px;
         left: 50px;
     }
+
     /* -----navbar-end----- */
 
     /* -----instr-begin----- */
@@ -665,9 +667,11 @@ a:hover .logo_w {
         justify-content: center;
         flex-wrap: wrap;
     }
+
     /* -----instr-end----- */
 
 }
+
 /* -----rwd-end(max-width:1199.98px)----- */
 
 /* -----rwd-begin(max-width:959.98px)----- */
@@ -678,27 +682,39 @@ a:hover .logo_w {
         width: 600px;
         margin-top: 50px;
     }
+
     .member_box {
         width: 300px;
         padding: 20px 30px;
     }
+
     .member .js-mbactive {
         transform: translateX(-300px);
     }
+
     /* -----member-end----- */
 }
+
 /* -----rwd-end(max-width:959.98px)----- */
 
 /* -----rwd-begin(max-width:768px)----- */
 @media screen and (max-width: 768px) {
+
+    /* -----aside-begin----- */
+    .aside_bar {
+        display: none;
+    }
+    /* -----asdie-end----- */
+
     /* -----footer-begin----- */
-    .footer_foot .footer_item:first-child {
-        flex-grow: 0;
+    .footer_foot .footer_list {
+        width: 250px;
     }
 
     .footer_body .footer_list {
-        width: 250px;
+        width: 230px;
     }
+
     /* -----footer-end----- */
 
     /* -----member-begin----- */
@@ -706,26 +722,33 @@ a:hover .logo_w {
         flex-direction: column;
         align-items: center;
     }
+
     .member_slide {
         height: 375px;
         right: 150px;
         top: 280px;
     }
+
     .member .js-mbactive {
         transform: translateY(-280px);
     }
+
     .member_slide.js-mbactive {
         height: 280px;
     }
+
     .btn-close {
         right: 150px;
     }
+
     /* -----member-end----- */
 }
+
 /* -----rwd-end(max-width:768px)----- */
 
 /* -----rwd-begin(max-width:575.98px)----- */
 @media screen and (max-width: 575.98px) {
+
     /* -----footer-begin----- */
     .footer .container {
         align-items: center;
@@ -747,20 +770,25 @@ a:hover .logo_w {
     .footer_foot .footer_list {
         justify-content: center;
     }
+
     /* -----footer-end----- */
 
     /* -----member-begin----- */
     .member_form {
         width: 400px;
     }
+
     .member_slide {
         right: 50px;
     }
+
     .btn-close {
         right: 50px;
     }
+
     /* -----member-end----- */
 }
+
 /* -----rwd-end(max-width:575.98px)----- */
 
 /* -----js-begin----- */
@@ -819,7 +847,23 @@ a:hover .logo_w {
 
 .js-slide {
     opacity: 0;
-    transition: .8s;
+    transition: .5s;
+}
+
+.js-slide+.js-slide {
+    transition-delay: .2s;
+}
+
+.js-slide+.js-slide+.js-slide {
+    transition-delay: .4s;
+}
+
+.js-slide+.js-slide+.js-slide+.js-slide {
+    transition-delay: .6s;
+}
+
+.js-slide+.js-slide+.js-slide+.js-slide+.js-slide {
+    transition-delay: .8s;
 }
 
 .js-slide-l {
@@ -828,6 +872,10 @@ a:hover .logo_w {
 
 .js-slide-r {
     transform: translateX(30%);
+}
+
+.js-slide-b {
+    transform: translateY(30%);
 }
 
 .js-active {

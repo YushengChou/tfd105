@@ -1,10 +1,10 @@
 /* -----banner-begin----- */
-.base-banner{
+.base-banner {
     position: relative;
     margin-bottom: 140px;
 }
 
-.banner_content{
+.banner_content {
     position: absolute;
     bottom: -150px;
     left: 0;
@@ -16,50 +16,51 @@
     background-color: #F4ECDC;
 }
 
-.banner_content h2{
+.banner_content h2 {
     color: #EC7801;
 }
 
-.banner_content h5{
+.banner_content h5 {
     margin: 40px 0;
     color: #333;
 }
 
-.banner_content p{
+.banner_content p {
     color: #643D2F;
     line-height: 1.5;
 }
+
 /* -----banner-end----- */
 
 /* -----chef-begin----- */
-.base-chef img{
+.base-chef img {
     border-radius: 50%;
 }
 
-.chef_list{
+.chef_list {
     display: flex;
     justify-content: space-between;
 }
 
-.chef_item{
+.chef_item {
     width: 250px;
 }
 
-.chef_item img{
+.chef_item img {
     transition: .8s;
 }
 
-.chef_item:hover img{
+.chef_item:hover img {
     transform: scaleX(-1);
 }
 
-.chef_item h5{
+.chef_item h5 {
     text-align: center;
     margin: 20px 0;
     color: #333;
 }
 
-.chef_item p{
+.chef_item p {
     color: #643D2F;
 }
 
@@ -72,20 +73,122 @@
 /* -----chef-end----- */
 
 /* -----place-brgin----- */
-.base-place .container{
+.base-place .container {
     display: flex;
     overflow: hidden;
 }
 
-.base-place .container div:first-child{
+.base-place .container .place_head {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     padding: 40px 80px;
 }
 
-.base-place .container div{
+.base-place .container div {
     width: 50%;
     background-color: #F4ECDC;
 }
+
+.place_body {
+    position: relative;
+    padding-bottom: 50%;
+}
+
+.place_body iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 /* -----place-end----- */
+
+@media (max-width: 1024px) {
+    .banner_content {
+        top: 50%;
+        width: 800px;
+        height: 400px;
+    }
+
+    .base-chef h3 {
+        padding-top: 80px;
+    }
+
+    .chef_list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .chef_item {
+        width: 80%;
+    }
+
+    .base-place .container .place_head {
+        padding: 20px 40px;
+    }
+}
+
+/* -----rwd-begin(max-width:821px)----- */
+@media screen and (max-width: 821px) {
+
+    /* -----content-begin----- */
+    .banner_content {
+        top: 80%;
+        width: 600px;
+        height: 550px;
+    }
+
+    /* -----content-end----- */
+    .base-chef h3 {
+        padding-top: 180px;
+    }
+}
+
+/* -----rwd-end(max-width:821px)----- */
+
+/* -----rwd-begin(max-width:768px)----- */
+@media screen and (max-width: 768px) {
+
+    /* -----content-begin----- */
+    .banner_content {
+        top: 100%;
+        width: 400px;
+        padding: 10px 20px;
+    }
+
+    /* -----content-end----- */
+    .base-chef h3 {
+        padding-top: 240px;
+    }
+}
+
+/* -----rwd-end(max-width:768px)----- */
+
+/* -----rwd-begin(max-width:540px)----- */
+@media screen and (max-width: 540px) {
+
+    /* -----content-begin----- */
+    .banner_content {
+        top: 150%;
+        width: 360px;
+        padding: 10px 20px;
+    }
+
+    /* -----content-end----- */
+    .base-chef h3 {
+        padding-top: 300px;
+    }
+
+    .base-place .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .base-place .container div{
+        width: 80%;
+    }
+}
+
+/* -----rwd-end(max-width:540px)----- */

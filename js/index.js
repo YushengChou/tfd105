@@ -6,17 +6,25 @@ let prevSlide = document.getElementById('PrevSlide');
 let nextSlide = document.getElementById('NextSlide');
 let dotBtn = document.getElementsByClassName('dot_btn');
 let dotItem = document.getElementsByClassName('dot_item');
-let num;
+let timer;
 let index = 0;
 let itemWidth = document.getElementsByClassName('carousel_item')[0].offsetWidth;
+
+// 螢幕寬度改變
+window.addEventListener('resize', function () {
+    // 取得新的寬度
+    itemWidth = document.getElementsByClassName('carousel_item')[0].offsetWidth;
+    // 刷新
+    dotItem[0].click();
+});
 
 function slide(d) {
     let newLeft = parseInt(slideList.style.left) + d;
     slideList.style.left = newLeft + 'px';
     if (newLeft > 0) {
-        slideList.style.left = -(itemWidth*3) + 'px';
+        slideList.style.left = -(itemWidth * 3) + 'px';
     }
-    if (newLeft === -(itemWidth*4)) {
+    if (newLeft === -(itemWidth * 4)) {
         slideList.style.left = 0 + 'px';
     }
 }
@@ -40,13 +48,13 @@ nextSlide.addEventListener('click', function () {
 })
 // 每隔三秒執行
 function play() {
-    num = setInterval(function () {
+    timer = setInterval(function () {
         nextSlide.click();
-    }, 30000)
+    }, 3000)
 }
 // 滑鼠滑入停止，移開繼續
 function stop() {
-    clearInterval(num);
+    clearInterval(timer);
 }
 // dot輪到的加上顏色
 function btnShow() {
