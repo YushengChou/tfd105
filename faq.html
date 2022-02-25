@@ -15,6 +15,18 @@
 
 <body>
 
+    <div id="Loading">
+        <div id="LoadText">
+            <span>L</span>
+            <span>O</span>
+            <span>A</span>
+            <span>D</span>
+            <span>I</span>
+            <span>N</span>
+            <span>G</span>
+        </div>
+    </div>
+
     <form class="member" id="Member">
         <div class="member_form">
             <button type="button" class="btn btn-close" id="BtnClose">x</button>
@@ -26,10 +38,10 @@
                 </div>
                 <div>
                     <label for="pw">PASSWORD</label>
-                    <input type="text" id="Pw">
+                    <input type="password" id="Pw">
                 </div>
                 <a href="#">FORGET YOUR PASSWORD?</a>
-                <input type="submit" value="OK">
+                <input type="submit" value="OK" id="LoginOk">
             </div>
             <div class="member_box">
                 <h4>SIGN UP</h4>
@@ -43,7 +55,7 @@
                 </div>
                 <div>
                     <label for="CfPw">CONFIRM PASSWORD</label>
-                    <input type="text" id="CfPw">
+                    <input type="password" id="CfPw">
                 </div>
                 <div>
                     <label for="Email">EMAIL</label>
@@ -101,7 +113,8 @@
                         </li>
                         <li class="nav_item" id="MemberBtn">
                             <a href="#">
-                                <i class="fas fa-user"></i>
+                                <i class="fas fa-user" id="User"></i>
+                                <i class="fa-solid fa-user-check js-none" id="UserIn"></i>
                             </a>
                         </li>
                         <li class="nav_item">
@@ -123,10 +136,10 @@
     </header>
 
     <aside class="aside_bar" id="AsideBar">
-        <a href="#">
+        <a href="javascript:;">
             <i class="fab fa-facebook-messenger"></i>
         </a>
-        <a href="#"></a>
+        <a href="javascript:;" id="BackTop"></a>
     </aside>
 
     <section class="base base-faq">
@@ -151,7 +164,7 @@
                     </p>
                 </li>
                 <li class="faq_item">
-                    <button type="button" class="btn btn-close btn-collapse">+</button>
+                    <button type="button" class="btn btn-collapse">+</button>
                     <div class="l-flip">
                         <p class="faq_num">02</p>
                         <h5 class="faq_q">
@@ -185,7 +198,7 @@
                     </p>
                 </li>
                 <li class="faq_item">
-                    <button type="button" class="btn btn-close btn-collapse">+</button>
+                    <button type="button" class="btn btn-collapse">+</button>
                     <div class="l-flip">
                         <p class="faq_num">04</p>
                         <h5 class="faq_q">
@@ -230,7 +243,7 @@
                 <input class="js-slide js-slide-b" type="email" placeholder="EMAIL">
                 <input class="js-slide js-slide-b" type="tel" placeholder="TEL">
                 <textarea class="js-slide js-slide-b" placeholder="MESSAGE..."></textarea>
-                <button class="btn btn-ok js-slide js-slide-b" type="button">SEND</button>
+                <button class="btn btn-ok" type="button">SEND</button>
             </form>
         </div>
     </section>
@@ -353,6 +366,7 @@
         </div>
     </footer>
 
+    <script src="https://unpkg.com/sweetalert2@7.8.2/dist/sweetalert2.all.js"></script>
     <script src="./js/faq.js"></script>
     <script src="./js/all.js"></script>
 </body>

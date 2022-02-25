@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>PRODUCT</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"
         integrity="sha384-3B6NwesSXE7YJlcLI9RpRqGf2p/EgVH8BgoKTaUrmKNDkHPStTQ3EyoYjCGXaOTS" crossorigin="anonymous">
     <link rel="shortcut icon" href="favicon.ico">
@@ -14,6 +14,18 @@
 </head>
 
 <body>
+
+    <div id="Loading">
+        <div id="LoadText">
+            <span>L</span>
+            <span>O</span>
+            <span>A</span>
+            <span>D</span>
+            <span>I</span>
+            <span>N</span>
+            <span>G</span>
+        </div>
+    </div>
 
     <form class="member" id="Member">
         <div class="member_form">
@@ -26,10 +38,10 @@
                 </div>
                 <div>
                     <label for="pw">PASSWORD</label>
-                    <input type="text" id="Pw">
+                    <input type="password" id="Pw">
                 </div>
                 <a href="#">FORGET YOUR PASSWORD?</a>
-                <input type="submit" value="OK">
+                <input type="submit" value="OK" id="LoginOk">
             </div>
             <div class="member_box">
                 <h4>SIGN UP</h4>
@@ -43,7 +55,7 @@
                 </div>
                 <div>
                     <label for="CfPw">CONFIRM PASSWORD</label>
-                    <input type="text" id="CfPw">
+                    <input type="password" id="CfPw">
                 </div>
                 <div>
                     <label for="Email">EMAIL</label>
@@ -101,7 +113,8 @@
                         </li>
                         <li class="nav_item" id="MemberBtn">
                             <a href="#">
-                                <i class="fas fa-user"></i>
+                                <i class="fas fa-user" id="User"></i>
+                                <i class="fa-solid fa-user-check js-none" id="UserIn"></i>
                             </a>
                         </li>
                         <li class="nav_item">
@@ -123,16 +136,16 @@
     </header>
 
     <aside class="aside_bar" id="AsideBar">
-        <a href="#">
+        <a href="javascript:;">
             <i class="fab fa-facebook-messenger"></i>
         </a>
-        <a href="#"></a>
+        <a href="javascript:;" id="BackTop"></a>
     </aside>
 
     <section class="base base-product">
         <div class="container">
-            <div class="product_head">
-                <img src="./img/product_1.png" width="500" height="500" alt="product_1">
+            <div class="product_head" id="Zoom">
+                <!-- <img src="./img/product_1.png" width="500" height="500" alt="product_1"> -->
             </div>
             <div class="product_body">
                 <h2>Bacon Cheeseburger</h2>
@@ -276,7 +289,9 @@
         </div>
     </footer>
 
+    <script src="https://unpkg.com/sweetalert2@7.8.2/dist/sweetalert2.all.js"></script>
     <script src="./js/all.js"></script>
+    <script src="./js/product.js"></script>
 </body>
 
 </html>

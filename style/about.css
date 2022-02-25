@@ -18,6 +18,42 @@
 
 .banner_content h2 {
     color: #EC7801;
+    position: relative;
+}
+
+.banner_content h2::after {
+    content: 'FRESH BURGER';
+    color: transparent;
+    width: 350px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: spotlight 5s infinite;
+    /* 漸層色 */
+    background: -webkit-linear-gradient(to right, #fa709a 0%, #643D2F 100%);
+    background: linear-gradient(to right, #fa709a 0%, #643D2F 100%);
+    /* 文字作為背景圖遮罩 */
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+@keyframes spotlight {
+    0% {
+        /* 30px*30px圓形 */
+        -webkit-clip-path: ellipse(30px 30px at 0% 50%);
+        clip-path: ellipse(30px 30px at 0% 50%);
+    }
+
+    50% {
+        -webkit-clip-path: ellipse(30px 30px at 0% 50%);
+        clip-path: ellipse(30px 30px at 100% 50%);
+    }
+
+    100% {
+        -webkit-clip-path: ellipse(30px 30px at 0% 50%);
+        clip-path: ellipse(30px 30px at 0% 50%);
+    }
 }
 
 .banner_content h5 {
@@ -186,9 +222,25 @@
         align-items: center;
     }
 
-    .base-place .container div{
+    .base-place .container div {
         width: 80%;
     }
 }
 
 /* -----rwd-end(max-width:540px)----- */
+
+/* -----rwd-begin(max-width:414px)----- */
+@media screen and (max-width: 414px) {
+
+    /* -----content-begin----- */
+    .banner_content {
+        top: 250%;
+    }
+
+    /* -----content-end----- */
+    .base-chef h3 {
+        padding-top: 350px;
+    }
+}
+
+/* -----rwd-end(max-width:414px)----- */

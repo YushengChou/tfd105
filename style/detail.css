@@ -1,19 +1,48 @@
 /* -----detail-begin----- */
 .base-detail h2{
     text-align: center;
+    margin: 0 auto;
     padding: 40px 0;
     color: #EC7801;
-    animation: t1 1s linear forwards;
+    font-family: monospace;
+    white-space: nowrap;
+    width: 1ch;
+    overflow: hidden;
+    /* steps最後一格由100%時呈現 */
+    animation: 5s typing steps(16, end) forwards;
+    animation-delay: 1s;
+    position: relative;
 }
 
-@keyframes t1{
+@keyframes typing {
+    0%{
+        width: 1ch;
+    }
+    100%{
+        width: 17ch;
+    }
+}
+
+.base-detail h2::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 5px;
+    height: 30px;
+    background-color: #643D2F;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    /* opacity: 1; */
+    animation: 1s cursor steps(2, jump-none) infinite;
+}
+
+@keyframes cursor {
     0%{
         opacity: 0;
-        transform: translateY(-100px) scale(0);
     }
     100%{
         opacity: 1;
-        transform: translate(0) scale(1);
     }
 }
 
@@ -49,24 +78,34 @@
     margin-right: 75px;
     margin-bottom: 20px;
     position: relative;
-    overflow: hidden;
+    transform-style: preserve-3d;
+    transform: rotateX(-5deg);
 }
 
 .news_body {
+    height: 100%;
     padding: 10px 20px;
     background-color: #F4ECDC;
     position: absolute;
     left: 0;
-    top: 350px;
-    z-index: -1;
+    top: 0;
     opacity: 0;
-    transition: .5s;
+    transform: rotateY(90deg);
+    transition: .8s;
+}
+
+.news_item img {
+    transition: .8s;
 }
 
 .news_item:hover .news_body{
-    top: 100px;
+    transform: rotateY(0deg);
     opacity: 1;
-    z-index: 0;
+}
+
+.news_item:hover img {
+    transform: rotateY(-90deg);
+    opacity: 0;
 }
 
 .news_body h4 {

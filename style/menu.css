@@ -65,14 +65,12 @@
 }
 
 .btn_item {
+    width: 25%;
     height: 50px;
-    border-radius: 5px;
     overflow: hidden;
-    background-color: #EC7801;
-}
-
-.btn_item+.btn_item {
-    margin-left: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .btn_item .btn {
@@ -80,10 +78,12 @@
     line-height: 50px;
     font-size: 20px;
     font-weight: bold;
+    border-radius: 5px;
     color: #F4ECDC;
+    background-color: #EC7801;
 }
 
-.btn_item:hover .btn {
+.btn_item .btn:hover {
     background-color: #643D2F;
 }
 
@@ -99,7 +99,8 @@
     }
 
     .product_item {
-        margin-right: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
     }
     /* -----product-end----- */
 }
@@ -114,7 +115,7 @@
     }
 
     .btn_item {
-        margin-right: 20px;
+        width: 50%;
         margin-bottom: 20px;
     }
     /* -----btn-end----- */

@@ -12,6 +12,7 @@ body {
     font-family: Verdana;
     background-image: url('../img/bgi-wall.png');
     height: 100%;
+    line-height: 1.5;
     margin-top: 80px;
 }
 
@@ -75,6 +76,54 @@ img {
 .base {
     margin: 20px 0;
 }
+
+/* -----loading-begin----- */
+#Loading {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .8);
+}
+
+#LoadText {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    color: #fff;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+#LoadText span {
+    display: inline-block;
+    animation: 3s flip infinite;
+    animation-delay: var(--delay);
+}
+
+@keyframes flip {
+    0% {
+        transform: rotateY(0deg);
+        color: #F4ECDC;
+    }
+
+    50% {
+        transform: rotateY(360deg);
+        color: #EC7801;
+    }
+
+    100% {
+        transform: rotateY(0deg);
+        color: #F4ECDC;
+    }
+}
+
+/* -----loading-end----- */
 
 /* -----logo-begin----- */
 a:hover .logo_b {
@@ -417,35 +466,69 @@ a:hover .logo_w {
     width: 50%;
 }
 
+.footer_body .footer_item:hover a {
+    color: #643D2F;
+}
+
 .footer_foot .footer_list {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     width: 300px;
-    height: 80px;
-}
-
-.footer_foot .footer_item:first-child {
-    flex-grow: 1;
+    height: 100%;
 }
 
 .footer_foot .footer_item {
-    flex-basis: 50px;
-    flex-grow: 0;
+    position: relative;
+    margin-left: 10px;
     text-align: center;
     color: #EC7801;
+    cursor: pointer;
+}
+
+.footer_foot .footer_item:first-child {
+    cursor: auto;
+}
+
+.footer_foot .footer_item::before {
+    font-family: "Font Awesome 6 Brands";
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 30px;
+    height: 0;
+    overflow: hidden;
+    transition: .5s;
+    line-height: 1;
+}
+
+.footer_foot .footer_item:nth-child(2)::before {
+    content: "\f082";
+    color: #385893;
+}
+
+.footer_foot .footer_item:nth-child(3)::before {
+    content: "\f16d";
+    color: #B42B50;
+}
+
+.footer_foot .footer_item:nth-child(4)::before {
+    content: "\f3c0";
+    color: #18B704;
+}
+
+.footer_foot .footer_item:hover::before {
+    height: 100%;
 }
 
 .footer_item i {
-    font-size: 24px;
+    font-size: 30px;
 }
 
 .footer_item a {
+    display: block;
     text-decoration: none;
     color: #EC7801;
-}
-
-.footer_item:hover a {
-    color: #643D2F;
 }
 
 /* -----footer-end----- */
@@ -587,22 +670,23 @@ a:hover .logo_w {
     width: 100%;
     height: auto;
     animation: s1 1s linear forwards;
+    animation-delay: 1s;
     opacity: 0;
 }
 
 @keyframes s1 {
     0% {
         opacity: 0;
-        transform: translateY(-100px);
+        transform: translateY(-100px) scale(0);
     }
 
     70% {
-        transform: translateY(30px);
+        transform: translateY(30px) scale(1.2);
     }
 
     100% {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateY(0) scale(1);
     }
 }
 
@@ -660,6 +744,11 @@ a:hover .logo_w {
         left: 50px;
     }
 
+    /* 將會員/收藏排在最上 */
+    .nav_item:nth-last-of-type(-n+2) {
+        order: -1;
+    }
+
     /* -----navbar-end----- */
 
     /* -----instr-begin----- */
@@ -704,6 +793,7 @@ a:hover .logo_w {
     .aside_bar {
         display: none;
     }
+
     /* -----asdie-end----- */
 
     /* -----footer-begin----- */
@@ -724,13 +814,14 @@ a:hover .logo_w {
     }
 
     .member_slide {
-        height: 375px;
+        height: 435px;
         right: 150px;
-        top: 280px;
+        top: 285px;
     }
 
     .member .js-mbactive {
-        transform: translateY(-280px);
+        transform: translateY(0);
+        top: 0;
     }
 
     .member_slide.js-mbactive {
@@ -748,6 +839,13 @@ a:hover .logo_w {
 
 /* -----rwd-begin(max-width:575.98px)----- */
 @media screen and (max-width: 575.98px) {
+
+    /* -----loading-begin----- */
+    #LoadText {
+        font-size: 18px;
+    }
+
+    /* -----loading-begin----- */
 
     /* -----footer-begin----- */
     .footer .container {
@@ -775,21 +873,107 @@ a:hover .logo_w {
 
     /* -----member-begin----- */
     .member_form {
-        width: 400px;
+        width: 100%;
     }
 
-    .member_slide {
-        right: 50px;
+    .member .member_slide {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .member_slide.js-mbactive {
+        height: 300px;
     }
 
     .btn-close {
-        right: 50px;
+        right: 120px;
     }
 
     /* -----member-end----- */
 }
 
 /* -----rwd-end(max-width:575.98px)----- */
+
+/* -----rwd-begin(max-width:415px)----- */
+@media screen and (max-width: 415px) {
+
+    /* -----member-begin----- */
+    .member_form {
+        width: 100%;
+    }
+
+    .member_slide {
+        height: 420px;
+        top: 300px;
+        right: 25px;
+    }
+
+    .member_slide.js-mbactive {
+        height: 300px;
+    }
+
+    .btn-close {
+        right: 60px;
+    }
+
+    /* -----member-end----- */
+}
+
+/* -----rwd-end(max-width:415px)----- */
+
+/* -----rwd-begin(max-width:376px)----- */
+@media screen and (max-width: 376px) {
+
+    /* -----member-begin----- */
+    .member_form {
+        margin-top: 10px;
+    }
+
+    .member_box {
+        padding: 5px 20px;
+    }
+
+    .member_slide {
+        height: 390px;
+        top: 270px;
+    }
+
+    .member_slide.js-mbactive {
+        height: 275px;
+    }
+
+    .btn-close {
+        right: 35px;
+    }
+
+    /* -----member-end----- */
+}
+
+/* -----rwd-end(max-width:376px)----- */
+/* -----rwd-begin(max-width:360px)----- */
+@media screen and (max-width: 360px) {
+
+    /* -----member-begin----- */
+    .btn-close {
+        top: 0;
+        right: 25px;
+    }
+
+    /* -----member-end----- */
+}
+
+/* -----rwd-end(max-width:360px)----- */
+/* -----rwd-begin(max-width:280px)----- */
+@media screen and (max-width: 280px) {
+
+    /* -----member-begin----- */
+    .btn-close {
+        right: -8px;
+    }
+    /* -----member-end----- */
+}
+
+/* -----rwd-end(max-width:280px)----- */
 
 /* -----js-begin----- */
 .js-block {
@@ -847,7 +1031,7 @@ a:hover .logo_w {
 
 .js-slide {
     opacity: 0;
-    transition: .5s;
+    transition: 1s;
 }
 
 .js-slide+.js-slide {
@@ -860,10 +1044,6 @@ a:hover .logo_w {
 
 .js-slide+.js-slide+.js-slide+.js-slide {
     transition-delay: .6s;
-}
-
-.js-slide+.js-slide+.js-slide+.js-slide+.js-slide {
-    transition-delay: .8s;
 }
 
 .js-slide-l {

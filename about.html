@@ -15,6 +15,18 @@
 
 <body>
 
+    <div id="Loading">
+        <div id="LoadText">
+            <span>L</span>
+            <span>O</span>
+            <span>A</span>
+            <span>D</span>
+            <span>I</span>
+            <span>N</span>
+            <span>G</span>
+        </div>
+    </div>
+
     <form class="member" id="Member">
         <div class="member_form">
             <button type="button" class="btn btn-close" id="BtnClose">x</button>
@@ -26,10 +38,10 @@
                 </div>
                 <div>
                     <label for="pw">PASSWORD</label>
-                    <input type="text" id="Pw">
+                    <input type="password" id="Pw">
                 </div>
                 <a href="#">FORGET YOUR PASSWORD?</a>
-                <input type="submit" value="OK">
+                <input type="submit" value="OK" id="LoginOk">
             </div>
             <div class="member_box">
                 <h4>SIGN UP</h4>
@@ -43,7 +55,7 @@
                 </div>
                 <div>
                     <label for="CfPw">CONFIRM PASSWORD</label>
-                    <input type="text" id="CfPw">
+                    <input type="password" id="CfPw">
                 </div>
                 <div>
                     <label for="Email">EMAIL</label>
@@ -101,7 +113,8 @@
                         </li>
                         <li class="nav_item" id="MemberBtn">
                             <a href="#">
-                                <i class="fas fa-user"></i>
+                                <i class="fas fa-user" id="User"></i>
+                                <i class="fa-solid fa-user-check js-none" id="UserIn"></i>
                             </a>
                         </li>
                         <li class="nav_item">
@@ -123,10 +136,10 @@
     </header>
 
     <aside class="aside_bar" id="AsideBar">
-        <a href="#">
+        <a href="javascript:;">
             <i class="fab fa-facebook-messenger"></i>
         </a>
-        <a href="#"></a>
+        <a href="javascript:;" id="BackTop"></a>
     </aside>
 
     <section class="base base-banner">
@@ -134,7 +147,7 @@
         <div class="banner_content">
             <h2>FRESH BURGER</h2>
             <h5>First Restaurants Open In Colorado</h5>
-            <p>Coloradoans get double the reason to celebrate on November 20, as the state’s first two In-N-Out restaurants open on the same day in Colorado Springs and Aurora. Because of a rigorous commitment to quality and freshness, a brand new warehouse and patty-making facility also are underway in Colorado Springs. This ensures that these new restaurants, and others that will follow, can guarantee the freshest, highest quality foods.</p>
+            <p>Taiwanese get double the reason to celebrate on November 20, as the city's first FRESH BURGER restaurants open in Taipei. Because of a rigorous commitment to quality and freshness, a brand new warehouse and patty-making facility also are underway in Taipei. This ensures that these new restaurants, and others that will follow, can guarantee the freshest, highest quality foods.</p>
         </div>
     </section>
 
@@ -150,7 +163,7 @@
             <li class="chef_item">
                 <img src="./img/chef-2.png" width="250" height="250" alt="chef_pic">
                 <h5>Ken</h5>
-                <p>Chef Ken’s personal trend is expressed in preparing food blending those with local herbs and fresh wild-growing spices. His remarkable creativity, garnished with years of experience, astonishes every customer, tasting classic dishes in a non-conventional mixture sealed by his unique signature.</p>
+                <p>Chef Ken’s personal trend is expressed in preparing food blending those with local herbs and fresh wild-growing spices. His remarkable creativity, tasting classic dishes in a non-conventional mixture sealed by his unique signature.</p>
             </li>
             <li class="chef_item">
                 <img src="./img/chef-3.png" width="250" height="250" alt="chef_pic">
@@ -298,6 +311,7 @@
         </div>
     </footer>
 
+    <script src="https://unpkg.com/sweetalert2@7.8.2/dist/sweetalert2.all.js"></script>
     <script src="./js/all.js"></script>
 </body>
 

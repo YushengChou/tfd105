@@ -4,6 +4,7 @@
 let slideList = document.getElementById('CaroList');
 let prevSlide = document.getElementById('PrevSlide');
 let nextSlide = document.getElementById('NextSlide');
+let DotList = document.getElementById('DotList');
 let dotBtn = document.getElementsByClassName('dot_btn');
 let dotItem = document.getElementsByClassName('dot_item');
 let timer;
@@ -50,7 +51,7 @@ nextSlide.addEventListener('click', function () {
 function play() {
     timer = setInterval(function () {
         nextSlide.click();
-    }, 3000)
+    }, 1000)
 }
 // 滑鼠滑入停止，移開繼續
 function stop() {
@@ -75,5 +76,11 @@ for (let i = 0; i < dotItem.length; i++) {
 slideList.style.left = 0 + 'px';
 dotBtn[index].classList.add('js-btnbgc');
 play();
-slideList.onmouseover = stop;
-slideList.onmouseout = play;
+slideList.onmousemove = stop;
+slideList.onmouseleave = play;
+DotList.onmouseenter= stop;
+DotList.onmouseleave = play;
+prevSlide.onmouseenter = stop;
+prevSlide.onmouseleave = play;
+nextSlide.onmouseenter = stop;
+nextSlide.onmouseleave = play;
