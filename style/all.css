@@ -346,7 +346,6 @@ a:hover .logo_w {
     position: absolute;
     top: 0;
     right: 0;
-    transition: .5s;
     font-size: 25px;
 }
 
@@ -366,6 +365,12 @@ a:hover .logo_w {
 /* -----more-end----- */
 
 /* -----insta-begin----- */
+.insta h3 {
+    text-align: center;
+    padding: 40px 0;
+    color: #EC7801;
+}
+
 .insta {
     margin: 20px auto;
 }

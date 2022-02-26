@@ -47,11 +47,11 @@ nextSlide.addEventListener('click', function () {
     btnShow();
     slide(-(itemWidth));
 })
-// 每隔三秒執行
+// 每隔2秒執行
 function play() {
     timer = setInterval(function () {
         nextSlide.click();
-    }, 1000)
+    }, 2000)
 }
 // 滑鼠滑入停止，移開繼續
 function stop() {
