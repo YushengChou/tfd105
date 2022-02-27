@@ -77,14 +77,17 @@ let btn_close = document.getElementById('BtnClose');
 member_btn.addEventListener('click', function () {
     member.classList.remove('js-none');
     member.classList.add('js-block');
+    document.body.style.overflow = 'hidden';
 })
 btn_close.addEventListener('click', function () {
     member.classList.add('js-none');
+    document.body.style.overflow = '';
 })
 window.addEventListener('click', function (e) {
     e.stopPropagation();
     if (e.target === member) {
         member.classList.add('js-none');
+        document.body.style.overflow = '';
     }
 })
 
@@ -112,11 +115,13 @@ nav_btn.addEventListener('click', function () {
     nav_btn.classList.toggle('js-none');
     nav_close.classList.toggle('js-none');
     nav_body.classList.add('js-active');
+    document.body.style.overflow = 'hidden';
 })
 nav_close.addEventListener('click', function () {
     nav_btn.classList.toggle('js-none');
     nav_close.classList.toggle('js-none');
     nav_body.classList.remove('js-active');
+    document.body.style.overflow = '';
 })
 
 // BackToTop

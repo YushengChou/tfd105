@@ -718,9 +718,14 @@ a:hover .logo_w {
     }
 
     /* -----navbar-begin----- */
+    .nav_head {
+        margin-left: 20px;
+    }
+
     .nav_btn {
         display: flex;
         height: 80px;
+        margin-right: 20px;
     }
 
     .nav_list {

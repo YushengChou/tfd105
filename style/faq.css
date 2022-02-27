@@ -164,6 +164,6 @@
 
 @media screen and (max-width: 415px) {
     .faq_item:nth-child(even) .faq_num::before {
-        right: 160px;
+        right: 155px;
     }
 }
