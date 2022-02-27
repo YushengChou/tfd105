@@ -845,6 +845,14 @@ a:hover .logo_w {
 /* -----rwd-begin(max-width:575.98px)----- */
 @media screen and (max-width: 575.98px) {
 
+    .nav_item {
+        height: 60px;
+    }
+
+    .nav_item a {
+        line-height: 60px;
+    }
+
     /* -----loading-begin----- */
     #LoadText {
         font-size: 18px;
@@ -877,6 +885,10 @@ a:hover .logo_w {
     /* -----footer-end----- */
 
     /* -----member-begin----- */
+    .member_box label {
+        margin-top: 20px;
+    }
+
     .member_form {
         width: 100%;
     }
@@ -899,6 +911,16 @@ a:hover .logo_w {
 
 /* -----rwd-end(max-width:575.98px)----- */
 
+@media screen and (max-width: 540px) {
+    .member_slide {
+        top: 275px;
+    }
+
+    .member_slide.js-mbactive {
+        height: 290px;
+    }
+}
+
 /* -----rwd-begin(max-width:415px)----- */
 @media screen and (max-width: 415px) {
 
@@ -909,12 +931,12 @@ a:hover .logo_w {
 
     .member_slide {
         height: 420px;
-        top: 300px;
+        top: 275px;
         right: 25px;
     }
 
     .member_slide.js-mbactive {
-        height: 300px;
+        height: 290px;
     }
 
     .btn-close {
@@ -940,11 +962,11 @@ a:hover .logo_w {
 
     .member_slide {
         height: 390px;
-        top: 270px;
+        top: 260px;
     }
 
     .member_slide.js-mbactive {
-        height: 275px;
+        height: 250px;
     }
 
     .btn-close {
@@ -957,6 +979,9 @@ a:hover .logo_w {
 /* -----rwd-end(max-width:376px)----- */
 /* -----rwd-begin(max-width:360px)----- */
 @media screen and (max-width: 360px) {
+    .member_slide {
+        top: 250px;
+    }
 
     /* -----member-begin----- */
     .btn-close {
