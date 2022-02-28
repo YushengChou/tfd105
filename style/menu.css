@@ -105,6 +105,10 @@
     background-color: #EC7801;
     cursor: pointer;
 }
+
+.btn_tab:hover {
+    color: #F4ECDC;
+}
 /* -----btn-end----- */
 
 /* -----rwd-begin(max-width:1319.98px)----- */
