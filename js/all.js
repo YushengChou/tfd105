@@ -175,6 +175,7 @@ su_ok.addEventListener('click', function (e) {
                 member_slide.classList.toggle('js-mbactive');
                 // 關閉註冊框
                 member.classList.add('js-none');
+                document.body.style.overflow = '';
             }
         } else {
             account = [acc];
@@ -230,6 +231,7 @@ LoginOk.addEventListener('click', function (e) {
                 User.classList.add('js-none');
                 UserIn.classList.remove('js-none');
                 member.classList.add('js-none');
+                document.body.style.overflow = '';
             } else {
                 if (user_pw !== compare_pw) {
                     swal({
