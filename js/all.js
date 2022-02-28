@@ -9,7 +9,7 @@ LoadText_span.forEach(function (span, index) {
 })
 // 載入之後
 window.addEventListener('load', function () {
-    // 兩秒後將loading元素刪除
+    // 1秒後將loading元素刪除
     this.setTimeout(function () {
         Loading.parentElement.removeChild(Loading);
     }, 1000)

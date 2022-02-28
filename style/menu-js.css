@@ -10,50 +10,15 @@
 }
 
 .product_list {
-    display: none;
+    display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-#Burger-beef:checked ~ .burger_beef {
-    display: flex;
-}
-
-#Burger-beef:checked ~ .btn_list label[for="Burger-beef"] span {
-    color: #F4ECDC;
-    background-color: #643D2F;
-}
-
-#Burger-pork:checked ~ .burger_pork {
-    display: flex;
-}
-
-#Burger-pork:checked ~ .btn_list label[for="Burger-pork"] span {
-    color: #F4ECDC;
-    background-color: #643D2F;
-}
-
-#Burger-chicken:checked ~ .burger_chicken {
-    display: flex;
-}
-
-#Burger-chicken:checked ~ .btn_list label[for="Burger-chicken"] span {
-    color: #F4ECDC;
-    background-color: #643D2F;
-}
-
-#Burger-vegetable:checked ~ .burger_vegetable {
-    display: flex;
-}
-
-#Burger-vegetable:checked ~ .btn_list label[for="Burger-vegetable"] span {
-    color: #F4ECDC;
-    background-color: #643D2F;
+    margin-right: -75px;
 }
 
 .product_item {
     text-align: center;
     margin-top: 20px;
+    margin-right: 75px;
 }
 
 .product_item a {
@@ -99,12 +64,29 @@
     justify-content: center;
 }
 
-.btn_tab {
-    padding: 10px 20px;
-    display: inline-block;
-    background-color: #EC7801;
-    cursor: pointer;
+.btn_item {
+    width: 25%;
+    height: 50px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.btn_item .btn {
+    padding: 0 20px;
+    line-height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    color: #F4ECDC;
+    background-color: #EC7801;
+}
+
+.btn_item .btn:hover {
+    background-color: #643D2F;
+}
+
 /* -----btn-end----- */
 
 /* -----rwd-begin(max-width:1319.98px)----- */
@@ -125,23 +107,17 @@
 
 /* -----rwd-end(max-width:1319.98px)----- */
 
-/* -----rwd-begin(max-width:575.98px)----- */
-@media screen and (max-width: 575.98px) {
+/* -----rwd-begin(max-width:767.98px)----- */
+@media screen and (max-width: 767.98px) {
     /* -----btn-begin----- */
-    .btn_tab {
-        padding: 10px 10px;
+    .btn_list {
+        flex-wrap: wrap;
     }
-    /* -----btn-end----- */
-}
-/* -----rwd-end(max-width:575.98px)----- */
 
-/* -----rwd-begin(max-width:321px)----- */
-@media screen and (max-width: 321px) {
-    /* -----btn-begin----- */
-    .btn_tab {
-        padding: 5px;
-        font-size: 14px;
+    .btn_item {
+        width: 50%;
+        margin-bottom: 20px;
     }
     /* -----btn-end----- */
 }
-/* -----rwd-end(max-width:321px)----- */
+/* -----rwd-end(max-width:767.98px)----- */

@@ -10,7 +10,7 @@
         integrity="sha384-3B6NwesSXE7YJlcLI9RpRqGf2p/EgVH8BgoKTaUrmKNDkHPStTQ3EyoYjCGXaOTS" crossorigin="anonymous">
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="./style/all.css">
-    <link rel="stylesheet" href="./style/menu.css">
+    <link rel="stylesheet" href="./style/menu-js.css">
 </head>
 
 <body>
@@ -26,7 +26,7 @@
             <span>G</span>
         </div>
     </div>
-
+    
     <form class="member" id="Member">
         <div class="member_form">
             <button type="button" class="btn btn-close" id="BtnClose">x</button>
@@ -144,25 +144,21 @@
 
     <section class="base base-product">
         <div class="container">
-            <input type="radio" name="tab" id="Burger-beef" class="js-none" checked>
-            <input type="radio" name="tab" id="Burger-pork" class="js-none">
-            <input type="radio" name="tab" id="Burger-chicken" class="js-none">
-            <input type="radio" name="tab" id="Burger-vegetable" class="js-none">
-            <div class="btn_list">
-                <label for="Burger-beef">
-                    <span class="btn_tab">BEEF</span>
-                </label>
-                <label for="Burger-pork">
-                    <span class="btn_tab">PORK</span>
-                </label>
-                <label for="Burger-chicken">
-                    <span class="btn_tab">CHICKEN</span>
-                </label>
-                <label for="Burger-vegetable">
-                    <span class="btn_tab">VEGETABLE</span>
-                </label>
-            </div>
-            <ul class="product_list burger_beef">
+            <ul class="btn_list">
+                <li class="btn_item">
+                    <button class="btn">BEEF</button>
+                </li>
+                <li class="btn_item">
+                    <button class="btn">PORK</button>
+                </li>
+                <li class="btn_item">
+                    <button class="btn">CHICKEN</button>
+                </li>
+                <li class="btn_item">
+                    <button class="btn">VEGETABLE</button>
+                </li>
+            </ul>
+            <ul class="product_list">
                 <li class="product_item beef">
                     <a href="product.html">
                         <div class="product_pic">
@@ -190,8 +186,6 @@
                         <p>990 cal</p>
                     </a>
                 </li>
-            </ul>
-            <ul class="product_list burger_pork">
                 <li class="product_item pork">
                     <a href="product.html">
                         <div class="product_pic">
@@ -210,17 +204,6 @@
                         <p>1100 cal</p>
                     </a>
                 </li>
-                <li class="product_item pork">
-                    <a href="product.html">
-                        <div class="product_pic">
-                            <img src="./img/product6.png" width="350" height="250" alt="product_5">
-                        </div>
-                        <h4>PORK BURGER</h4>
-                        <p>1200 cal</p>
-                    </a>
-                </li>
-            </ul>
-            <ul class="product_list burger_chicken">
                 <li class="product_item chicken">
                     <a href="product.html">
                         <div class="product_pic">
@@ -239,17 +222,6 @@
                         <p>700 cal</p>
                     </a>
                 </li>
-                <li class="product_item chicken">
-                    <a href="product.html">
-                        <div class="product_pic">
-                            <img src="./img/product8.png" width="350" height="250" alt="product_7">
-                        </div>
-                        <h4>CHICKEN BURGER</h4>
-                        <p>710 cal</p>
-                    </a>
-                </li>
-            </ul>
-            <ul class="product_list burger_vegetable">
                 <li class="product_item vegetable">
                     <a href="product.html">
                         <div class="product_pic">
@@ -266,15 +238,6 @@
                         </div>
                         <h4>VEGAN BURGER</h4>
                         <p>600 cal</p>
-                    </a>
-                </li>
-                <li class="product_item vegetable">
-                    <a href="product.html">
-                        <div class="product_pic">
-                            <img src="./img/product1.png" width="350" height="250" alt="product_9">
-                        </div>
-                        <h4>VEGAN BURGER</h4>
-                        <p>700 cal</p>
                     </a>
                 </li>
             </ul>
@@ -402,6 +365,7 @@
 
     <script src="https://unpkg.com/sweetalert2@7.8.2/dist/sweetalert2.all.js"></script>
     <script src="./js/all.js"></script>
+    <script src="./js/menu.js"></script>
 </body>
 
 </html>
