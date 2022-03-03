@@ -137,13 +137,15 @@ BackTop.addEventListener('click', function () {
 // 註冊存取資料
 let user_id_el = document.getElementById('UserId');
 let user_pw_el = document.getElementById('PassWord');
+let CfPw_el = document.getElementById('CfPw');
 let su_ok = document.getElementById('SuOk');
 su_ok.addEventListener('click', function (e) {
     let user_id = (user_id_el.value).trim();
     let user_pw = (user_pw_el.value).trim();
+    let CfPw = (CfPw_el.value).trim();
     // 取消預設事件
     e.preventDefault();
-    if (user_id != "" && user_pw != "") {
+    if (user_id != "" && user_pw != "" && CfPw != "") {
         // 物件裝資料
         let acc = {
             "id": user_id,
@@ -164,7 +166,29 @@ su_ok.addEventListener('click', function (e) {
                 }
             }
             if (compare) {
-                account.push(acc);
+                if (user_pw === CfPw) {
+                    account.push(acc);
+                    localStorage.setItem('account', JSON.stringify(account));
+                    swal({
+                        title: "註冊成功",
+                        type: "success"
+                    });
+                    user_id_el.value = '';
+                    user_pw_el.value = '';
+                    member_slide.classList.toggle('js-mbactive');
+                    // 關閉註冊框
+                    member.classList.add('js-none');
+                    document.body.style.overflow = '';
+                } else {
+                    swal({
+                        title: "確認密碼不相符",
+                        type: "error"
+                    });
+                }
+            }
+        } else {
+            if (user_pw === CfPw) {
+                account = [acc];
                 localStorage.setItem('account', JSON.stringify(account));
                 swal({
                     title: "註冊成功",
@@ -175,20 +199,12 @@ su_ok.addEventListener('click', function (e) {
                 member_slide.classList.toggle('js-mbactive');
                 // 關閉註冊框
                 member.classList.add('js-none');
-                document.body.style.overflow = '';
+            } else {
+                swal({
+                    title: "確認密碼不相符",
+                    type: "error"
+                });
             }
-        } else {
-            account = [acc];
-            localStorage.setItem('account', JSON.stringify(account));
-            swal({
-                title: "註冊成功",
-                type: "success"
-            });
-            user_id_el.value = '';
-            user_pw_el.value = '';
-            member_slide.classList.toggle('js-mbactive');
-            // 關閉註冊框
-            member.classList.add('js-none');
         }
     } else {
         swal({
