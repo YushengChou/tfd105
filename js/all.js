@@ -83,10 +83,35 @@ btn_close.addEventListener('click', function () {
     member.classList.add('js-none');
     document.body.style.overflow = '';
 })
+
+// 漢堡選單
+let nav_btn = document.getElementById('NavBtn');
+let nav_close = document.getElementById('NavClose');
+let nav_body = document.getElementById('NavBody');
+let nav_list = document.getElementById('NavList');
+nav_btn.addEventListener('click', function () {
+    nav_btn.classList.toggle('js-none');
+    nav_close.classList.toggle('js-none');
+    nav_body.classList.add('js-active');
+    document.body.style.overflow = 'hidden';
+})
+nav_close.addEventListener('click', function () {
+    nav_btn.classList.toggle('js-none');
+    nav_close.classList.toggle('js-none');
+    nav_body.classList.remove('js-active');
+    document.body.style.overflow = '';
+})
+// 彈窗關閉
 window.addEventListener('click', function (e) {
     e.stopPropagation();
     if (e.target === member) {
         member.classList.add('js-none');
+        document.body.style.overflow = '';
+    }
+    if (e.target === nav_list) {
+        nav_btn.classList.toggle('js-none');
+        nav_close.classList.toggle('js-none');
+        nav_body.classList.remove('js-active');
         document.body.style.overflow = '';
     }
 })
@@ -106,23 +131,6 @@ function doScroll() {
     }
 }
 window.addEventListener('scroll', doScroll);
-
-// 漢堡選單
-let nav_btn = document.getElementById('NavBtn');
-let nav_close = document.getElementById('NavClose');
-let nav_body = document.getElementById('NavBody');
-nav_btn.addEventListener('click', function () {
-    nav_btn.classList.toggle('js-none');
-    nav_close.classList.toggle('js-none');
-    nav_body.classList.add('js-active');
-    document.body.style.overflow = 'hidden';
-})
-nav_close.addEventListener('click', function () {
-    nav_btn.classList.toggle('js-none');
-    nav_close.classList.toggle('js-none');
-    nav_body.classList.remove('js-active');
-    document.body.style.overflow = '';
-})
 
 // BackToTop
 let BackTop = document.getElementById('BackTop');
