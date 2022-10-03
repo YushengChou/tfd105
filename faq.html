@@ -239,10 +239,10 @@
         <div class="container">
             <h3>CONTACT INFO.</h3>
             <form class="info">
-                <input class="js-slide js-slide-b" type="text" placeholder="NAME">
-                <input class="js-slide js-slide-b" type="email" placeholder="EMAIL">
-                <input class="js-slide js-slide-b" type="tel" placeholder="TEL">
-                <textarea class="js-slide js-slide-b" placeholder="MESSAGE..."></textarea>
+                <input class="js-slide js-slide-b" type="text" placeholder="NAME" id="NameVal">
+                <input class="js-slide js-slide-b" type="email" placeholder="EMAIL" id="EmailVal">
+                <input class="js-slide js-slide-b" type="tel" placeholder="TEL" id="TelVal">
+                <textarea class="js-slide js-slide-b" placeholder="MESSAGE..." id="MessageVal"></textarea>
                 <button class="btn btn-ok" type="button">SEND</button>
             </form>
         </div>
@@ -370,6 +370,41 @@
     <script src="https://unpkg.com/sweetalert2@7.8.2/dist/sweetalert2.all.js"></script>
     <script src="./js/faq.js"></script>
     <script src="./js/all.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $('.btn-ok').on('click', function () {
+            if ($('#NameVal').val() && $('#EmailVal').val() && $('#TelVal').val() && $('#MessageVal').val()) {
+                let dataVal = {
+                    'testTime': Date(),
+                    'testName': $('#NameVal').val(),
+                    'testEmail': $('#EmailVal').val(),
+                    'testTel': $('#TelVal').val(),
+                    'testMessage': $('#MessageVal').val(),
+                }
+                $.ajax({
+                    type: "get",
+                    url: "https://script.google.com/macros/s/AKfycbyLCBe7ckz-h6uB8NkAs40eZMvshXruyl8nl6IKc2pSLaAu7nV_WNRGxgOW1WDtNCY/exec",
+                    data: dataVal,
+                    dataType: "JSON",
+                    success: function (response) {
+                        swal({
+                            title: "已送出",
+                            type: "success"
+                        });
+                        $('#NameVal').val('');
+                        $('#EmailVal').val('');
+                        $('#TelVal').val('');
+                        $('#MessageVal').val('');
+                    }
+                })
+            } else {
+                swal({
+                    title: "欄位未填完整",
+                    type: "error"
+                });
+            }
+        })
+    </script>
 </body>
 
 </html>
