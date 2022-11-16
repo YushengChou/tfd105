@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/gsaptrain.css">
+    <title>gsap train</title>
+</head>
+<body>
+    <div class="mouse" id="mouse"></div>
+    <div class="container">
+        <div class="line" id="h_line"></div>
+        <div class="line" id="v_line"></div>
+        <div class="circle" id="circle1"></div>
+        <div class="circle" id="circle2"></div>
+        <div class="circle" id="circle3"></div>
+        <div class="circle" id="circle4"></div>
+        <div class="circle" id="circle5"></div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js" integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(document).mousemove(function(e) {
+            console.log(e.pageX)
+            console.log(e.pageY)
+            $('#mouse').css('left', e.pageX + 'px')
+            $('#mouse').css('top', e.pageY + 'px')
+            gsap.to('#circle2', 1, {
+                x: e.pageX / 5,
+                y: e.pageY / 5
+            })
+            gsap.to('#circle3', 1, {
+                x: -e.pageX / 5,
+                y: e.pageY / 5
+            })
+            gsap.to('#circle4', 1, {
+                x: e.pageX / 5,
+                y: -e.pageY / 5
+            })
+            gsap.to('#circle5', 1, {
+                x: -e.pageX / 5,
+                y: -e.pageY / 5
+            })
+        })
+
+        gsap.to('#h_line', 5, {
+            width: '100%',
+            onComplete: function() {
+                gsap.to('.circle', 1, {
+                    opacity: 1
+                })
+            }
+        })
+        gsap.to('#v_line', 5, {
+            height: '100%',
+        })
+        
+    </script>
+</body>
+</html>
