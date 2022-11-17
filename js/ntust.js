@@ -1,5 +1,11 @@
 "use strict";
 
+$('#boxAmount, #boxRound, #boxMoney').on('blur', function() {
+    $('#boxPack').val($('#boxAmount').val())
+    $('#boxAmounts').val($('#boxAmount').val() * $('#boxRound').val())
+    $('#boxCount').val($('#boxAmounts').val() * $('#boxMoney').val())
+})
+
 $('#ok').on('click', function() {
     let td1 = $('#boxDate').val()
     let td2 = $('#boxBook').val()
