@@ -45,14 +45,31 @@
           <label class="divided_lable" for="boxAmount">本</label>
           <input class="divided_input" type="text" id="boxRound" />
           <label class="divided_lable" for="boxRound">回</label>
-          <input class="divided_input" type="text" id="boxAmounts" readonly style="background-color:#999 ;" />
+          <input
+            class="divided_input"
+            type="text"
+            id="boxAmounts"
+            readonly
+            style="background-color: #999"
+          />
           <label class="divided_lable" for="boxAmounts">本</label>
-          <input class="divided_input" type="text" id="boxPack" readonly style="background-color:#999 ;"/>
+          <input
+            class="divided_input"
+            type="text"
+            id="boxPack"
+            readonly
+            style="background-color: #999"
+          />
           <label class="divided_lable" for="boxPack">包</label>
         </li>
         <li class="count_item">
           <label for="boxCount">小計</label>
-          <input type="text" id="boxCount" readonly style="background-color:#999 ;"/>
+          <input
+            type="text"
+            id="boxCount"
+            readonly
+            style="background-color: #999"
+          />
         </li>
         <li class="count_item">
           <label for="boxCounts">合計</label>
@@ -64,23 +81,22 @@
       </ul>
       <table>
         <thead>
-            <tr>
-                <th>日期</th>
-                <th>書號</th>
-                <th>開數</th>
-                <th>張數</th>
-                <th>裝訂明細</th>
-                <th colspan='2'>單價</th>
-                <th colspan='4'>數量</th>
-                <th>小計</th>
-                <th>合計</th>
-            </tr>
+          <tr>
+            <th>日期</th>
+            <th>書號</th>
+            <th>開數</th>
+            <th>張數</th>
+            <th>裝訂明細</th>
+            <th colspan="2">單價</th>
+            <th colspan="4">數量</th>
+            <th>小計</th>
+            <th>合計</th>
+          </tr>
         </thead>
-        <tbody id="dataBody">
-        </tbody>
+        <tbody id="dataBody"></tbody>
       </table>
     </div>
-
+    <script src="https://unpkg.com/sweetalert2@7.8.2/dist/sweetalert2.all.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./js/ntust.js"></script>
   </body>
