@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+html body {
+  background-color: #f7bb94;
+  font-family: Helvetica;
+}
+html .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+html .container .title {
+  margin: 30px 0;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 900;
+}
+html .container .count_list {
+  margin: 0 auto;
+}
+html .container .count_list .count_item {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  font-size: 24px;
+}
+html .container .count_list .count_item label {
+  display: inline-block;
+  width: 100px;
+  margin-right: 20px;
+}
+html .container .count_list .count_item input {
+  height: 20px;
+  border: 0;
+  border-radius: 3px;
+  outline: 0;
+  background-color: #e7e7e7;
+}
+html .container .count_list .count_item p {
+  width: 100px;
+  margin-right: 20px;
+}
+html .container .count_list .count_item .divided_input {
+  width: 50px;
+  margin-right: 10px;
+}
+html .container .count_list .count_item .divided_lable {
+  width: 30px;
+  margin-right: 10px;
+}
+html .container .count_list .count_item .ok {
+  border: 2px solid blue;
+  width: 80px;
+  height: 40px;
+  font-size: 20px;
+  color: #000;
+  cursor: pointer;
+}
+html .container .count_list .count_item .ok:hover {
+  border-color: #e7e7e7;
+  background-color: blue;
+  color: #fff;
+}
+html .container .count_list .count_item:last-child {
+  margin-top: 40px;
+  justify-content: center;
+}
+html .container table, html .container th, html .container td {
+  border: 1px solid #000;
+  text-align: center;
+  font-size: 20px;
+}
+html .container th, html .container td {
+  padding: 5px;
+}/*# sourceMappingURL=ntust.css.map */

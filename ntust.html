@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NTUST圖書</title>
+    <link rel="stylesheet" href="./style/reset.css" />
+    <link rel="stylesheet" href="./style/ntust.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="title">台科大圖書請款明細</h2>
+      <ul class="count_list">
+        <li class="count_item">
+          <label for="boxDate">日期</label>
+          <input type="date" id="boxDate" />
+        </li>
+        <li class="count_item">
+          <label for="boxBook">書號</label>
+          <input type="text" id="boxBook" />
+        </li>
+        <li class="count_item">
+          <label for="boxOpen">開數</label>
+          <input type="text" id="boxOpen" />
+        </li>
+        <li class="count_item">
+          <label for="boxSheet">張數</label>
+          <input type="text" id="boxSheet" />
+        </li>
+        <li class="count_item">
+          <label for="boxDetail">裝訂明細</label>
+          <input type="text" id="boxDetail" />
+        </li>
+        <li class="count_item">
+          <p>單價</p>
+          <input class="divided_input" type="text" id="boxBasic" />
+          <label class="divided_lable" for="boxBasic">基</label>
+          <input class="divided_input" type="text" id="boxMoney" />
+          <label class="divided_lable" for="boxMoney">元</label>
+        </li>
+        <li class="count_item">
+          <p>數量</p>
+          <input class="divided_input" type="text" id="boxAmount" />
+          <label class="divided_lable" for="boxAmount">本</label>
+          <input class="divided_input" type="text" id="boxRound" />
+          <label class="divided_lable" for="boxRound">回</label>
+          <input class="divided_input" type="text" id="boxAmounts" />
+          <label class="divided_lable" for="boxAmounts">本</label>
+          <input class="divided_input" type="text" id="boxPack" />
+          <label class="divided_lable" for="boxPack">包</label>
+        </li>
+        <li class="count_item">
+          <label for="boxCount">小計</label>
+          <input type="text" id="boxCount" />
+        </li>
+        <li class="count_item">
+          <label for="boxCounts">合計</label>
+          <input type="text" id="boxCounts" />
+        </li>
+        <li class="count_item">
+          <input id="ok" class="ok" type="button" value="確認" />
+        </li>
+      </ul>
+      <table>
+        <thead>
+            <tr>
+                <th>日期</th>
+                <th>書號</th>
+                <th>開數</th>
+                <th>張數</th>
+                <th>裝訂明細</th>
+                <th colspan='2'>單價</th>
+                <th colspan='4'>數量</th>
+                <th>小計</th>
+                <th>合計</th>
+            </tr>
+        </thead>
+        <tbody id="dataBody">
+        </tbody>
+      </table>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./js/ntust.js"></script>
+  </body>
+</html>
