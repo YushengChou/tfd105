@@ -1,6 +1,6 @@
 "use strict";
 
-登入
+// 登入
 $('#signIn').on('click', function() {
     if ($('#pwd').val() != '0000') {
         swal({
