@@ -37,6 +37,7 @@ html .container .count_list .count_item label {
   margin-right: 20px;
 }
 html .container .count_list .count_item input {
+  width: 112px;
   height: 20px;
   border: 0;
   border-radius: 3px;

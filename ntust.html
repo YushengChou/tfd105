@@ -33,11 +33,9 @@
           <input type="text" id="boxDetail" />
         </li>
         <li class="count_item">
-          <p>單價</p>
+          <p>基本價</p>
           <input class="divided_input" type="text" id="boxBasic" />
-          <label class="divided_lable" for="boxBasic">基</label>
-          <input class="divided_input" type="text" id="boxMoney" />
-          <label class="divided_lable" for="boxMoney">元</label>
+          <label class="divided_lable" for="boxBasic">元</label>
         </li>
         <li class="count_item">
           <p>數量</p>
@@ -53,6 +51,13 @@
             style="background-color: #999"
           />
           <label class="divided_lable" for="boxAmounts">本</label>
+          
+        </li>
+        <li class="count_item">
+          <p>包裝</p>
+          
+          <input class="divided_input" type="text" id="boxMoney" />
+          <label class="divided_lable" for="boxMoney">元</label>
           <input
             class="divided_input"
             type="text"
@@ -61,19 +66,36 @@
             style="background-color: #999"
           />
           <label class="divided_lable" for="boxPack">包</label>
+          <input
+            class="divided_input"
+            type="text"
+            id="boxCount2"
+            style="background-color: #999"
+            readonly
+          />
+          <label class="divided_lable" for="boxCount2">元</label>
         </li>
         <li class="count_item">
-          <label for="boxCount">小計</label>
+          <p>小計</p>
           <input
+            class="divided_input"
             type="text"
             id="boxCount"
-            readonly
             style="background-color: #999"
+            readonly
           />
+          <label class="divided_lable">元</label> 
         </li>
         <li class="count_item">
-          <label for="boxCounts">合計</label>
-          <input type="text" id="boxCounts" />
+          <p>合計</p>
+          <input
+            class="divided_input"
+            type="text"
+            id="boxCounts"
+            style="background-color: #999"
+            readonly
+          />
+          <label class="divided_lable">元</label> 
         </li>
         <li class="count_item">
           <input id="ok" class="ok" type="button" value="確認" />
@@ -85,10 +107,9 @@
             <th>日期</th>
             <th>書號</th>
             <th>開數</th>
-            <th>張數</th>
             <th>裝訂明細</th>
-            <th colspan="2">單價</th>
-            <th colspan="4">數量</th>
+            <th>單價</th>
+            <th colspan="3">數量</th>
             <th>小計</th>
             <th>合計</th>
           </tr>
