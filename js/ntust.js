@@ -1,27 +1,27 @@
 "use strict";
 
-// 登入
-// $('#signIn').on('click', function() {
-//     if ($('#pwd').val() != '0000') {
-//         swal({
-//             title: "密碼錯誤",
-//             type: "error"
-//         })
-//     } else {
-//         swal({
-//             title: "登入成功",
-//             type: "success"
-//         }).then(function() {
-//             gsap.to('.mask', 1, {
-//                 opacity: 0,
-//                 scale: 0,
-//                 onComplete: function() {
-//                     $('.mask').remove()
-//                 }
-//             })
-//         })
-//     }
-// })
+登入
+$('#signIn').on('click', function() {
+    if ($('#pwd').val() != '0000') {
+        swal({
+            title: "密碼錯誤",
+            type: "error"
+        })
+    } else {
+        swal({
+            title: "登入成功",
+            type: "success"
+        }).then(function() {
+            gsap.to('.mask', 1, {
+                opacity: 0,
+                scale: 0,
+                onComplete: function() {
+                    $('.mask').remove()
+                }
+            })
+        })
+    }
+})
 
 $('#boxAmount, #boxRound, #boxMoney, #boxBasic').on('blur', function() {
     // 包數 = 回數
