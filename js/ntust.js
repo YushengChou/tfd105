@@ -1,27 +1,27 @@
 "use strict";
 
 // 登入
-$('#signIn').on('click', function() {
-    if ($('#pwd').val() != '0000') {
-        swal({
-            title: "密碼錯誤",
-            type: "error"
-        })
-    } else {
-        swal({
-            title: "登入成功",
-            type: "success"
-        }).then(function() {
-            gsap.to('.mask', 1, {
-                opacity: 0,
-                scale: 0,
-                onComplete: function() {
-                    $('.mask').remove()
-                }
-            })
-        })
-    }
-})
+// $('#signIn').on('click', function() {
+//     if ($('#pwd').val() != '0000') {
+//         swal({
+//             title: "密碼錯誤",
+//             type: "error"
+//         })
+//     } else {
+//         swal({
+//             title: "登入成功",
+//             type: "success"
+//         }).then(function() {
+//             gsap.to('.mask', 1, {
+//                 opacity: 0,
+//                 scale: 0,
+//                 onComplete: function() {
+//                     $('.mask').remove()
+//                 }
+//             })
+//         })
+//     }
+// })
 
 $('#boxAmount, #boxRound, #boxMoney, #boxBasic').on('blur', function() {
     // 包數 = 回數
@@ -64,29 +64,29 @@ $('#ok').on('click', function() {
         count ++;
         $('#dataBody').append(`
             <tr>
-                <td>${count}</td>
-                <td>${td1}</td>
-                <td>${td2}</td>
-                <td>${td3}</td>
-                <td>${td4}</td>
-                <td>${td5}元</td>
-                <td>${td6}本</td>
-                <td>${td7}回</td>
-                <td>${td8}本</td>
-                <td>${td9}元</td>
+                <td class='td0'>${count}</td>
+                <td class='td1'>${td1}</td>
+                <td class='td2'>${td2}</td>
+                <td class='td3'>${td3}</td>
+                <td class='td4'>${td4}</td>
+                <td class='td5'>${td5}元</td>
+                <td class='td6'>${td6}本</td>
+                <td class='td7'>${td7}回</td>
+                <td class='td8'>${td8}本</td>
+                <td class='td9'>${td9}元</td>
                 <td></td>
             </tr>
             <tr>
-                <td colspan="3"></td>
+                <td colspan="4"></td>
                 <td>包裝</td>
-                <td>${td10}元</td>
-                <td colspan="3">${td11}包</td>
-                <td>${td12}元</td>
+                <td class='td10'>${td10}元</td>
+                <td class='td11' colspan="3">${td11}包</td>
+                <td class='td12'>${td12}元</td>
                 <td></td>
             </tr>
             <tr>
-                <td colspan="9"></td>
-                <td>${td13}元</td>
+                <td colspan="10"></td>
+                <td class='td13'>${td13}元</td>
             </tr>
         `)
         swal({
@@ -109,3 +109,42 @@ $('#ok').on('click', function() {
         $('#boxCount2').val('')
     }
 })
+
+$('#send').on('click', function() {
+    let index = $('#dataBody').find('td.td0').text()
+    let date = $('#dataBody').find('td.td1').text()
+    let bookNum = $('#dataBody').find('td.td2').text()
+    let openNum = $('#dataBody').find('td.td3').text()
+    let detail = $('#dataBody').find('td.td4').text()
+    let uPrice = $('#dataBody').find('td.td5').text()
+    let ben = $('#dataBody').find('td.td6').text()
+    let hui = $('#dataBody').find('td.td7').text()
+    let bens = $('#dataBody').find('td.td8').text()
+    let money = $('#dataBody').find('td.td9').text()
+    let dataVal = {
+        'index': index,
+        'date': date,
+        'bookNum': bookNum,
+        'openNum': openNum,
+        'detail': detail,
+        'uPrice': uPrice,
+        'ben': ben,
+        'hui': hui,
+        'bens': bens,
+        'money': money,
+    }
+    $.ajax({
+        type: 'get',
+        url: 'https://script.google.com/macros/s/AKfycbwWB3R9EmMOvMlvgEjJyRR-8O3OQb6IFkpoPZ7lDBicW9VrVXDGI3R9LrCFErEB37rRxQ/exec',
+        data: dataVal,
+        dataTyoe: 'JSON',
+        success: function(res) {
+            console.log(res)
+        },
+        error: function(res) {
+            console.log(res)
+        }
+    })
+})
+
+// https://script.google.com/macros/s/AKfycbwWB3R9EmMOvMlvgEjJyRR-8O3OQb6IFkpoPZ7lDBicW9VrVXDGI3R9LrCFErEB37rRxQ/exec
