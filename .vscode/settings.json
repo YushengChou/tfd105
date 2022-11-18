@@ -1,6 +1,5 @@
 {
     "liveServer.settings.port": 5501,
-<<<<<<< HEAD
     //css產出設定
     "liveSassCompile.settings.formats": [
         {
@@ -8,13 +7,5 @@
             "extensionName": ".css",
             "savePath": "/style" //此為輸出的路徑，可以自行更改
         }
-=======
-    "liveSassCompile.settings.formats":[
-        {
-            "format": "expanded",
-            "extensionName": ".css",
-            "savePath": "/style"
-        },
->>>>>>> yudesktop
     ]
 }
