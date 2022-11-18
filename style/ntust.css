@@ -33,7 +33,7 @@ html .container .count_list .count_item {
 }
 html .container .count_list .count_item label {
   display: inline-block;
-  width: 100px;
+  width: 130px;
   margin-right: 20px;
 }
 html .container .count_list .count_item input {

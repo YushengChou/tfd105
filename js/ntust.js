@@ -1,6 +1,6 @@
 "use strict";
 
-$('#boxAmount, #boxRound, #boxMoney').on('blur', function() {
+$('#boxAmount, #boxRound, #boxMoney, #boxBasic').on('blur', function() {
     // 包數 = 回數
     $('#boxPack').val($('#boxAmount').val())
     // 本數 = 本 * 回
@@ -33,7 +33,6 @@ $('#ok').on('click', function() {
         let td7 = $('#boxRound').val()
         let td8 = $('#boxAmounts').val()
         let td9 = $('#boxCount').val()
-
         let td10 = $('#boxMoney').val()
         let td11 = $('#boxPack').val()
         let td12 = $('#boxCount2').val()
@@ -44,7 +43,7 @@ $('#ok').on('click', function() {
                 <td>${td2}</td>
                 <td>${td3}</td>
                 <td>${td4}</td>
-                <td>基本價${td5}元</td>
+                <td>${td5}元</td>
                 <td>${td6}本</td>
                 <td>${td7}回</td>
                 <td>${td8}本</td>
