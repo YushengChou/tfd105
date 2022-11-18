@@ -90,7 +90,7 @@ $('#ok').on('click', function() {
             </tr>
         `)
         swal({
-            title: "OK",
+            title: "成功新增",
             type: "success"
         });
         $('#boxDate').val('')

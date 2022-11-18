@@ -6,7 +6,6 @@ html {
   scroll-behavior: smooth;
 }
 html body {
-  overflow: hidden;
   background-color: #f7bb94;
   font-family: Helvetica;
 }
