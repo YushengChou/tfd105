@@ -12,7 +12,13 @@ $('#signIn').on('click', function() {
             title: "登入成功",
             type: "success"
         }).then(function() {
-            $('.mask').remove()
+            gsap.to('.mask', 1, {
+                opacity: 0,
+                scale: 0,
+                onComplete: function() {
+                    $('.mask').remove()
+                }
+            })
         })
     }
 })
@@ -34,6 +40,7 @@ $('#boxAmount, #boxRound, #boxMoney, #boxBasic').on('blur', function() {
     $('#boxCounts').val(parseInt($('#boxCount').val()) + parseInt($('#boxCount2').val()))
 })
 
+let count = 0;
 $('#ok').on('click', function() {
     if($('#boxCounts').val() == '') {
         swal({
@@ -54,8 +61,10 @@ $('#ok').on('click', function() {
         let td11 = $('#boxPack').val()
         let td12 = $('#boxCount2').val()
         let td13 = $('#boxCounts').val()
+        count ++;
         $('#dataBody').append(`
             <tr>
+                <td>${count}</td>
                 <td>${td1}</td>
                 <td>${td2}</td>
                 <td>${td3}</td>
