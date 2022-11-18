@@ -92,7 +92,9 @@ $('#ok').on('click', function() {
         swal({
             title: "成功新增",
             type: "success"
-        });
+        }).then(function() {
+            $('#ok').prop('disabled', true)
+        })
         $('#boxDate').val('')
         $('#boxBook').val('')
         $('#boxOpen').val('')
@@ -121,6 +123,10 @@ $('#send').on('click', function() {
     let hui = $('#dataBody').find('td.td7').text()
     let bens = $('#dataBody').find('td.td8').text()
     let money = $('#dataBody').find('td.td9').text()
+    let pack = $('#dataBody').find('td.td10').text()
+    let packPrice = $('#dataBody').find('td.td11').text()
+    let packAmount = $('#dataBody').find('td.td12').text()
+    let totalPrice = $('#dataBody').find('td.td13').text()
     let dataVal = {
         'index': index,
         'date': date,
@@ -132,19 +138,28 @@ $('#send').on('click', function() {
         'hui': hui,
         'bens': bens,
         'money': money,
+        'pack': pack,
+        'packPrice': packPrice,
+        'packAmount': packAmount,
+        'totalPrice': totalPrice,
     }
     $.ajax({
         type: 'get',
-        url: 'https://script.google.com/macros/s/AKfycbwWB3R9EmMOvMlvgEjJyRR-8O3OQb6IFkpoPZ7lDBicW9VrVXDGI3R9LrCFErEB37rRxQ/exec',
+        url: 'https://script.google.com/macros/s/AKfycbwQjdjXceOTYf0tP4IkmGNQBCfQvKyQR9nP0dd5KihVwrZEwOXadIZxmwoWQMpEda3aHw/exec',
         data: dataVal,
         dataTyoe: 'JSON',
         success: function(res) {
             console.log(res)
+            swal({
+                title: "成功新增",
+                type: "success"
+            }).then(function() {
+                $('#dataBody').empty()
+                $('#ok').prop('disabled', false)
+            })
         },
         error: function(res) {
             console.log(res)
         }
     })
 })
-
-// https://script.google.com/macros/s/AKfycbwWB3R9EmMOvMlvgEjJyRR-8O3OQb6IFkpoPZ7lDBicW9VrVXDGI3R9LrCFErEB37rRxQ/exec
