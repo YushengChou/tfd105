@@ -1,7 +1,12 @@
 body {
   cursor: none;
   background-color: orange;
-  overflow: hidden;
+  overflow-x: hidden;
+  font-size: 16px;
+}
+body a {
+  display: block;
+  text-decoration: none;
 }
 body .mouse {
   position: absolute;
@@ -12,28 +17,199 @@ body .mouse {
   transform: translate(-50%, -50%);
   z-index: 9;
 }
-body .container {
+body .header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid #000;
+  margin-bottom: 20px;
+}
+body .header .header_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  max-width: 100%;
+  margin: auto;
+}
+body .header .header_container h1.logo {
+  padding: 0 20px;
+  color: #000;
+  font-size: 32px;
+  font-weight: 900;
+}
+body .header .header_container .nav {
+  display: flex;
+  align-items: center;
+}
+body .header .header_container .nav .nav_list {
+  display: flex;
+}
+body .header .header_container .nav .nav_list .nav_item {
   position: relative;
-  max-width: 1200px;
-  height: 600px;
-  margin: 50px auto;
+  margin-left: 20px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+body .header .header_container .nav .nav_list .nav_item:last-child {
+  width: 150px;
+}
+body .header .header_container .nav .nav_list .nav_item:last-child::after {
+  position: absolute;
+  display: block;
+  content: "";
+  left: 0;
+  top: -16px;
+  width: 1px;
+  height: 51px;
+  background-color: #000;
+}
+body .container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+body .container .box {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 73px;
+  width: 100%;
+  height: 800px;
+  margin: auto;
   border: 1px solid;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
 }
-body .container .line {
+body .container .box .line {
   position: absolute;
   width: 3px;
   height: 3px;
   background-color: #000;
 }
-body .container .circle {
+body .container .box .circle {
   position: absolute;
   width: 300px;
   height: 300px;
   border: 1px solid #fff;
   border-radius: 50%;
   opacity: 0;
+}
+body .container .blank {
+  overflow: hidden;
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 1;
+  top: 875px;
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 10px;
+}
+body .container .blank .blank_head {
+  padding: 0 20px;
+  font-size: 3rem;
+  font-weight: 900;
+}
+body .container .blank .blank_body {
+  position: relative;
+  transform: translate(-20px, -20px);
+  width: 5px;
+  height: 40px;
+  background-color: #000;
+}
+body .container .blank .blank_body::before, body .container .blank .blank_body::after {
+  position: absolute;
+  top: 24px;
+  display: block;
+  content: "";
+  width: 5px;
+  height: 20px;
+  background-color: #000;
+}
+body .container .blank .blank_body::before {
+  left: 6px;
+  transform: rotate(45deg);
+}
+body .container .blank .blank_body::after {
+  left: -6px;
+  transform: rotate(-45deg);
+}
+body .container .box1 {
+  background-color: #fff;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 52px;
+  z-index: 2;
+  padding: 20px;
+  border-top: 1px solid #000;
+  height: 75vh;
+}
+body .container .box1 h2 {
+  font-size: 5rem;
+  font-weight: 900;
+  text-align: center;
+}
+body .container .box1 p {
+  padding: 300px 0 20px;
+  font-size: 3rem;
+}
+body .container .box2 {
+  background-color: #fff;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 52px;
+  z-index: 3;
+  padding: 0 20px 20px;
+  border-top: 1px solid #000;
+}
+body .container .box2 .box2_head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+body .container .box2 .box2_head h4 {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+body .container .box2 .box2_head p {
+  font-size: 1.2rem;
+}
+body .container .box2 .box2_head button {
+  border: 0;
+  border-radius: 25px;
+  outline: 0;
+  padding: 10px;
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+body .container .box2 .box2_body {
+  display: flex;
+  justify-content: space-between;
+}
+body .container .box2 .box2_body .box2_text {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  width: 400px;
+  align-self: flex-end;
+}
+body .container .box2 .box2_body .box2_text span {
+  color: #c4c4c4;
+}
+body .container .box2 + .box2 {
+  top: 140px;
+}
+body .container .box2 + .box2 + .box2 {
+  top: 220px;
+}
+body .container .box2 + .box2 + .box2 + .box2 {
+  top: 300px;
+}
+body .container .box3 {
+  background-color: red;
+  position: relative;
+  height: 70vh;
+  z-index: 4;
 }/*# sourceMappingURL=gsaptrain.css.map */
