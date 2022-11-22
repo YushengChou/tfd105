@@ -15,7 +15,7 @@ body .mouse {
   border-radius: 50%;
   background-color: #fff;
   transform: translate(-50%, -50%);
-  z-index: 9;
+  z-index: 999;
 }
 body .header {
   position: -webkit-sticky;
@@ -177,9 +177,10 @@ body .container .box2 .box2_head h4 {
 body .container .box2 .box2_head p {
   font-size: 1.2rem;
 }
-body .container .box2 .box2_head button {
+body .container .box2 .box2_head .btn_inner button {
   border: 0;
   border-radius: 25px;
+  cursor: none;
   outline: 0;
   padding: 10px;
   font-size: 1.2rem;
@@ -208,8 +209,16 @@ body .container .box2 + .box2 + .box2 + .box2 {
   top: 300px;
 }
 body .container .box3 {
-  background-color: red;
-  position: relative;
+  background-color: #c4c4c4;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 53px;
   height: 70vh;
   z-index: 4;
+}
+body .container .box4 {
+  position: relative;
+  background-color: #1a1818;
+  height: 100vh;
+  z-index: 5;
 }/*# sourceMappingURL=gsaptrain.css.map */

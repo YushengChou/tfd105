@@ -9,8 +9,10 @@ gsap.to('#mouse', 1, {
 
 // 滑鼠位置
 $(document).mousemove(function(e) {
-    $('#mouse').css('left', e.pageX + 'px')
-    $('#mouse').css('top', e.pageY + 'px')
+    gsap.to('#mouse', 0.2, {
+        x: e.pageX,
+        y: e.pageY
+    })
 })
 
 // 圓形移動座標
@@ -53,4 +55,19 @@ gsap.to('#arrow', 1, {
     y: 100,
     opacity: 0.2,
     repeat: -1
+})
+
+// 監聽scroll距離
+$(document).on('scroll', function() {
+    if(window.pageYOffset > 4200) {
+        gsap.to('body', 1, {
+            backgroundColor: '#999',
+            color: 'green',
+        })
+    } else {
+        gsap.to('body', 1, {
+            backgroundColor: 'orange',
+            color: '#000',
+        })
+    }
 })
