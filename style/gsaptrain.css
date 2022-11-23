@@ -221,4 +221,11 @@ body .container .box4 {
   background-color: #1a1818;
   height: 100vh;
   z-index: 5;
+}
+body .container .box3 p, body .container .box4 p {
+  font-size: 5rem;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }/*# sourceMappingURL=gsaptrain.css.map */
