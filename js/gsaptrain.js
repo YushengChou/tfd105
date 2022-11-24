@@ -71,3 +71,10 @@ $(document).on('scroll', function() {
         })
     }
 })
+
+// 卡片繞圓
+gsap.to('#imgRotate', 10, {
+    rotation: 360,
+    ease: 'none',
+    repeat: -1,
+})

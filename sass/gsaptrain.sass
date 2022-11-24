@@ -6,6 +6,9 @@ body
     a
         display: block
         text-decoration: none
+    img
+        display: block
+        vertical-align: bottom
     .mouse
         position: absolute
         width: 30px
@@ -175,16 +178,49 @@ body
             top: 53px
             height: 70vh
             z-index: 4
-        .box4
-            position: relative
-            background-color: #1a1818
-            height: 100vh
-            z-index: 5
-        .box3, .box4
             p
                 font-size: 5rem
                 text-align: center
                 position: relative
                 top: 50%
                 transform: translateY(-50%)
+        .box4
+            position: relative
+            background-color: #1a1818
+            height: 100vh
+            z-index: 5
+            overflow: hidden
+            .imgs
+                overflow: hidden
+                .img_inner
+                    position: relative
+                    font-size: 0
+                    display: flex
+                    justify-content: space-between
+                    transform-origin: 50% 200%
+                    height: 400px
+                    // &::before
+                    //     position: absolute
+                    //     left: 50%
+                    //     top: 200%
+                    //     transform: translate(-50%, -50%)
+                    //     display: block
+                    //     content: ''
+                    //     width: 1050px
+                    //     height: 1050px
+                    //     background-color: #fff
+                    //     border-radius: 50%
+                    .img1
+                        transform: translate(200px, 120px) rotate(-45deg)
+                    .img2
+                        transform: translate(85px, -30px) rotate(-20deg)
+                    .img3
+                        transform: translate(0px, -75px) rotate(0deg)
+                    .img4
+                        transform: translate(-85px, -30px) rotate(20deg)
+                    .img5
+                        transform: translate(-200px, 120px) rotate(45deg)
+
+
+            
                     

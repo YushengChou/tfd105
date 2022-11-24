@@ -8,6 +8,10 @@ body a {
   display: block;
   text-decoration: none;
 }
+body img {
+  display: block;
+  vertical-align: bottom;
+}
 body .mouse {
   position: absolute;
   width: 30px;
@@ -216,16 +220,43 @@ body .container .box3 {
   height: 70vh;
   z-index: 4;
 }
-body .container .box4 {
-  position: relative;
-  background-color: #1a1818;
-  height: 100vh;
-  z-index: 5;
-}
-body .container .box3 p, body .container .box4 p {
+body .container .box3 p {
   font-size: 5rem;
   text-align: center;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+}
+body .container .box4 {
+  position: relative;
+  background-color: #1a1818;
+  height: 100vh;
+  z-index: 5;
+  overflow: hidden;
+}
+body .container .box4 .imgs {
+  overflow: hidden;
+}
+body .container .box4 .imgs .img_inner {
+  position: relative;
+  font-size: 0;
+  display: flex;
+  justify-content: space-between;
+  transform-origin: 50% 200%;
+  height: 400px;
+}
+body .container .box4 .imgs .img_inner .img1 {
+  transform: translate(200px, 120px) rotate(-45deg);
+}
+body .container .box4 .imgs .img_inner .img2 {
+  transform: translate(85px, -30px) rotate(-20deg);
+}
+body .container .box4 .imgs .img_inner .img3 {
+  transform: translate(0px, -75px) rotate(0deg);
+}
+body .container .box4 .imgs .img_inner .img4 {
+  transform: translate(-85px, -30px) rotate(20deg);
+}
+body .container .box4 .imgs .img_inner .img5 {
+  transform: translate(-200px, 120px) rotate(45deg);
 }/*# sourceMappingURL=gsaptrain.css.map */
