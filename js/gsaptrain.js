@@ -75,6 +75,6 @@ $(document).on('scroll', function() {
 // 卡片繞圓
 gsap.to('#imgRotate', 10, {
     rotation: 360,
-    ease: 'none',
+    ease: 'cubic-bezier(1,.32,.53,.35)',
     repeat: -1,
 })
