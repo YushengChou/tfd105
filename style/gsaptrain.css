@@ -1,18 +1,19 @@
-body {
-  cursor: none;
+html {
+  scroll-behavior: smooth;
   background-color: orange;
   overflow-x: hidden;
   font-size: 16px;
 }
-body a {
+html a {
+  color: #000;
   display: block;
   text-decoration: none;
 }
-body img {
+html img {
   display: block;
   vertical-align: bottom;
 }
-body .mouse {
+html .mouse {
   position: absolute;
   width: 30px;
   height: 30px;
@@ -21,14 +22,14 @@ body .mouse {
   transform: translate(-50%, -50%);
   z-index: 999;
 }
-body .header {
+html .header {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   border-bottom: 1px solid #000;
   margin-bottom: 20px;
 }
-body .header .header_container {
+html .header .header_container {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -36,29 +37,29 @@ body .header .header_container {
   max-width: 100%;
   margin: auto;
 }
-body .header .header_container h1.logo {
+html .header .header_container h1.logo {
   padding: 0 20px;
   color: #000;
   font-size: 32px;
   font-weight: 900;
 }
-body .header .header_container .nav {
+html .header .header_container .nav {
   display: flex;
   align-items: center;
 }
-body .header .header_container .nav .nav_list {
+html .header .header_container .nav .nav_list {
   display: flex;
 }
-body .header .header_container .nav .nav_list .nav_item {
+html .header .header_container .nav .nav_list .nav_item {
   position: relative;
   margin-left: 20px;
   font-size: 1.2rem;
   text-align: center;
 }
-body .header .header_container .nav .nav_list .nav_item:last-child {
+html .header .header_container .nav .nav_list .nav_item:last-child {
   width: 150px;
 }
-body .header .header_container .nav .nav_list .nav_item:last-child::after {
+html .header .header_container .nav .nav_list .nav_item:last-child::after {
   position: absolute;
   display: block;
   content: "";
@@ -68,11 +69,11 @@ body .header .header_container .nav .nav_list .nav_item:last-child::after {
   height: 51px;
   background-color: #000;
 }
-body .container {
+html .container {
   max-width: 100%;
   margin: 0 auto;
 }
-body .container .box {
+html .container .box {
   position: -webkit-sticky;
   position: sticky;
   top: 73px;
@@ -85,13 +86,13 @@ body .container .box {
   align-items: center;
   overflow: hidden;
 }
-body .container .box .line {
+html .container .box .line {
   position: absolute;
   width: 3px;
   height: 3px;
   background-color: #000;
 }
-body .container .box .circle {
+html .container .box .circle {
   position: absolute;
   width: 300px;
   height: 300px;
@@ -99,7 +100,7 @@ body .container .box .circle {
   border-radius: 50%;
   opacity: 0;
 }
-body .container .blank {
+html .container .blank {
   overflow: hidden;
   position: -webkit-sticky;
   position: sticky;
@@ -111,19 +112,19 @@ body .container .blank {
   align-items: center;
   padding-right: 10px;
 }
-body .container .blank .blank_head {
+html .container .blank .blank_head {
   padding: 0 20px;
   font-size: 3rem;
   font-weight: 900;
 }
-body .container .blank .blank_body {
+html .container .blank .blank_body {
   position: relative;
   transform: translate(-20px, -20px);
   width: 5px;
   height: 40px;
   background-color: #000;
 }
-body .container .blank .blank_body::before, body .container .blank .blank_body::after {
+html .container .blank .blank_body::before, html .container .blank .blank_body::after {
   position: absolute;
   top: 24px;
   display: block;
@@ -132,15 +133,15 @@ body .container .blank .blank_body::before, body .container .blank .blank_body::
   height: 20px;
   background-color: #000;
 }
-body .container .blank .blank_body::before {
+html .container .blank .blank_body::before {
   left: 6px;
   transform: rotate(45deg);
 }
-body .container .blank .blank_body::after {
+html .container .blank .blank_body::after {
   left: -6px;
   transform: rotate(-45deg);
 }
-body .container .box1 {
+html .container .box1 {
   background-color: #fff;
   position: -webkit-sticky;
   position: sticky;
@@ -150,16 +151,16 @@ body .container .box1 {
   border-top: 1px solid #000;
   height: 75vh;
 }
-body .container .box1 h2 {
+html .container .box1 h2 {
   font-size: 5rem;
   font-weight: 900;
   text-align: center;
 }
-body .container .box1 p {
+html .container .box1 p {
   padding: 300px 0 20px;
   font-size: 3rem;
 }
-body .container .box2 {
+html .container .box2 {
   background-color: #fff;
   position: -webkit-sticky;
   position: sticky;
@@ -168,51 +169,50 @@ body .container .box2 {
   padding: 0 20px 20px;
   border-top: 1px solid #000;
 }
-body .container .box2 .box2_head {
+html .container .box2 .box2_head {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 0;
 }
-body .container .box2 .box2_head h4 {
+html .container .box2 .box2_head h4 {
   font-size: 1.5rem;
   font-weight: 900;
 }
-body .container .box2 .box2_head p {
+html .container .box2 .box2_head p {
   font-size: 1.2rem;
 }
-body .container .box2 .box2_head .btn_inner button {
+html .container .box2 .box2_head .btn_inner button {
   border: 0;
   border-radius: 25px;
-  cursor: none;
   outline: 0;
   padding: 10px;
   font-size: 1.2rem;
   font-weight: 900;
 }
-body .container .box2 .box2_body {
+html .container .box2 .box2_body {
   display: flex;
   justify-content: space-between;
 }
-body .container .box2 .box2_body .box2_text {
+html .container .box2 .box2_body .box2_text {
   font-size: 1.2rem;
   line-height: 1.5;
   width: 400px;
   align-self: flex-end;
 }
-body .container .box2 .box2_body .box2_text span {
+html .container .box2 .box2_body .box2_text span {
   color: #c4c4c4;
 }
-body .container .box2 + .box2 {
+html .container .box2 + .box2 {
   top: 140px;
 }
-body .container .box2 + .box2 + .box2 {
+html .container .box2 + .box2 + .box2 {
   top: 220px;
 }
-body .container .box2 + .box2 + .box2 + .box2 {
+html .container .box2 + .box2 + .box2 + .box2 {
   top: 300px;
 }
-body .container .box3 {
+html .container .box3 {
   background-color: #c4c4c4;
   position: -webkit-sticky;
   position: sticky;
@@ -220,24 +220,25 @@ body .container .box3 {
   height: 70vh;
   z-index: 4;
 }
-body .container .box3 p {
+html .container .box3 p {
   font-size: 5rem;
   text-align: center;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
 }
-body .container .box4 {
+html .container .box4 {
   position: relative;
   background-color: #1a1818;
   height: 100vh;
   z-index: 5;
   overflow: hidden;
 }
-body .container .box4 .imgs {
+html .container .box4 .imgs {
   overflow: hidden;
+  background-color: green;
 }
-body .container .box4 .imgs .img_inner {
+html .container .box4 .imgs .img_inner {
   position: relative;
   font-size: 0;
   display: flex;
@@ -245,18 +246,18 @@ body .container .box4 .imgs .img_inner {
   transform-origin: 50% 200%;
   height: 400px;
 }
-body .container .box4 .imgs .img_inner .img1 {
+html .container .box4 .imgs .img_inner .img1 {
   transform: translate(200px, 120px) rotate(-45deg);
 }
-body .container .box4 .imgs .img_inner .img2 {
+html .container .box4 .imgs .img_inner .img2 {
   transform: translate(85px, -30px) rotate(-20deg);
 }
-body .container .box4 .imgs .img_inner .img3 {
+html .container .box4 .imgs .img_inner .img3 {
   transform: translate(0px, -75px) rotate(0deg);
 }
-body .container .box4 .imgs .img_inner .img4 {
+html .container .box4 .imgs .img_inner .img4 {
   transform: translate(-85px, -30px) rotate(20deg);
 }
-body .container .box4 .imgs .img_inner .img5 {
+html .container .box4 .imgs .img_inner .img5 {
   transform: translate(-200px, 120px) rotate(45deg);
 }/*# sourceMappingURL=gsaptrain.css.map */

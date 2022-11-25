@@ -9,31 +9,55 @@ gsap.to('#mouse', 1, {
 
 // 滑鼠位置
 $(document).mousemove(function(e) {
-    gsap.to('#mouse', 0.2, {
-        x: e.pageX,
-        y: e.pageY
+    gsap.to('#mouse', 2, {
+        x: e.pageX + 20,
+        y: e.pageY + 20
     })
 })
 
 // 圓形移動座標
 $('.box').mousemove(function(e) {
-    gsap.to('#circle2', 1, {
+    gsap.to('#circle2', .5, {
         x: e.pageX / 5,
         y: e.pageY / 5
     })
-    gsap.to('#circle3', 1, {
+    gsap.to('#circle3', .5, {
         x: -e.pageX / 5,
         y: e.pageY / 5
     })
-    gsap.to('#circle4', 1, {
+    gsap.to('#circle4', .5, {
         x: e.pageX / 5,
         y: -e.pageY / 5
     })
-    gsap.to('#circle5', 1, {
+    gsap.to('#circle5', .5, {
         x: -e.pageX / 5,
         y: -e.pageY / 5
     })
 })
+
+// 離開範圍
+// $('.box').mouseleave(function(e) {
+//     gsap.to('#circle2', 1, {
+//         x: 0,
+//         y: 0
+//     })
+//     gsap.to('#circle3', 1, {
+//         x: 0,
+//         y: 0
+//     })
+//     gsap.to('#circle4', 1, {
+//         x: 0,
+//         y: 0
+//     })
+//     gsap.to('#circle5', 1, {
+//         x: 0,
+//         y: 0
+//     })
+// })
+
+// $('.box').mouseout(function() {
+//     console.log('mouseout')
+// })
 
 // 水平線移動完成接顯示圓形
 gsap.to('#h_line', 3, {
@@ -75,6 +99,14 @@ $(document).on('scroll', function() {
 // 卡片繞圓
 gsap.to('#imgRotate', 10, {
     rotation: 360,
-    ease: 'cubic-bezier(1,.32,.53,.35)',
+    ease: 'none',
     repeat: -1,
+})
+
+$(document).mousedown(function() {
+    console.log('down')
+})
+
+$(document).mouseup(function() {
+    console.log('up')
 })
