@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day</title>
+    <style>
+      /* 文字滑入+陰影效果CSS */
+      .box {
+        display: inline-flex;
+        position: relative;
+      }
+      .black-bg {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(0, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+        opacity: 0;
+        transition: all 0.5s ease;
+      }
+      .title {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        color: #fff;
+        text-align: center;
+        opacity: 0;
+        bottom: -20px;
+        transition: all 0.5s ease;
+      }
+      .box:hover .black-bg {
+        opacity: 1;
+      }
+      .box:hover .title {
+        opacity: 1;
+        bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 計算日期相差天數 -->
+    <h1>日期</h1>
+    <label for="day1">從&ensp;</label><input type="date" id="day1" />
+    <br />
+    <br />
+    <label for="day2">到&ensp;</label><input type="date" id="day2" />
+    <br /><br />
+    <label for="">相差天數</label>&ensp;<input type="text" readonly id="res" />
+    <br /><br />
+
+    <!-- 文字滑入+陰影效果 -->
+    <div class="box">
+      <img src="https://fakeimg.pl/150x150/46A3FF/5B5B5B/?text=TEST" />
+      <div class="black-bg"></div>
+      <div class="title">Hello</div>
+    </div>
+
+    <script>
+      let day1 = document.querySelector("#day1");
+      let day2 = document.querySelector("#day2");
+      let res = document.querySelector("#res");
+
+      day1.addEventListener("change", function () {
+        if (!day1.value || !day2.value) {
+          res.value = "";
+        } else {
+          res.value =
+            (new Date(day2.value) - new Date(day1.value)) /
+            (1000 * 60 * 60 * 24);
+        }
+      });
+      day2.addEventListener("change", function () {
+        if (!day1.value || !day2.value) {
+          res.value = "";
+        } else {
+          res.value =
+            (new Date(day2.value) - new Date(day1.value)) /
+            (1000 * 60 * 60 * 24);
+        }
+      });
+
+      // var date1 = new Date("2022-12-21 00:00:00".replace(/-/g, "/"));
+      // var date2 = new Date("2022-12-21 23:59:59".replace(/-/g, "/"));
+      // console.log(date1);
+      // console.log(date2);
+
+      // // 計算兩個日期相差天數
+      // var DateDiff = function (sDate1, sDate2) {
+      //   // sDate1 和 sDate2 是 2016-06-18 格式
+      //   var oDate1 = new Date(sDate1);
+      //   var oDate2 = new Date(sDate2);
+      //   var iDays = parseInt(Math.abs(oDate1 - oDate2) / 1000 / 60 / 60 / 24); // 把相差的毫秒數轉換為天數
+      //   return iDays;
+      // };
+      // let dateGap = DateDiff('2020-02-01', '2020-03-01')
+      // console.log(dateGap)
+
+      // 計算兩個日期相差天數
+      let d1 = new Date("2000-01-01");
+      let d2 = new Date("2000-01-05");
+      console.log((d2 - d1) / (1000 * 60 * 60 * 24));
+    </script>
+  </body>
+</html>
