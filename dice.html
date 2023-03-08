@@ -6,17 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>dice</title>
     <style>
-      body {
-        position: relative;
-        padding-top: 50px;
-        left: 50%;
+      .container {
+        width: 600px;
+        height: 600px;
+        margin: 0 auto;
       }
       .dice {
         width: 100px;
         height: 100px;
         position: relative;
+        left: 50%;
+        top: 50%;
         transform-style: preserve-3d;
-        animation: roll 5s infinite linear;
+        animation: 3s linear infinite;
+        animation-fill-mode: forwards;
       }
 
       .face {
@@ -25,7 +28,7 @@
         position: absolute;
         border: 1px solid black;
         box-sizing: border-box;
-        background-color: red;
+        background-color: rgb(139, 118, 118);
         color: #fff;
         font-size: 32px;
         display: flex;
@@ -57,35 +60,47 @@
         transform: rotateX(-90deg) translateZ(50px);
       }
 
-      .-paused {
-        animation-play-state: paused; /* running */
+      .paused {
+        animation-play-state: paused;
+      }
+
+      .roll {
+        animation-name: roll;
       }
 
       @keyframes roll {
         from {
-          transform: rotateX(0deg) rotateY(0deg);
+          transform: rotateX(0) rotateY(0) rotateZ(0);
         }
         to {
-          transform: rotateX(360deg) rotateY(360deg);
+          transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
         }
       }
     </style>
   </head>
   <body>
-    <div class="dice" id="dice">
-      <div class="face front">1</div>
-      <div class="face back">2</div>
-      <div class="face right">3</div>
-      <div class="face left">4</div>
-      <div class="face top">5</div>
-      <div class="face bottom">6</div>
+    <input type="button" value="start" id="btn">
+    <div class="container">
+      <div class="dice" id="dice">
+        <div class="face front" id="1">1</div>
+        <div class="face back" id="2">2</div>
+        <div class="face right" id="3">3</div>
+        <div class="face left" id="4">4</div>
+        <div class="face top" id="5">5</div>
+        <div class="face bottom" id="6">6</div>
+      </div>
     </div>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
-      const dice = document.querySelector("#dice");
-      dice.addEventListener("click", function () {
-        dice.classList.toggle('-paused')
+      $("#btn").click(() => {
+        $("#dice").addClass("roll");
       });
+
+      $("#dice").on("click", (e) => {
+        $("#dice").toggleClass("paused");
+      });
+
     </script>
   </body>
 </html>

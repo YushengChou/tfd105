@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>陣列亂數1~360產生6個數字(可重複)</title>
+  </head>
+  <body>
+    <script>
+      // 產生一個隨機數字，範圍從 min 到 max
+      function randomNum(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+
+      // 產生一個長度為 length，數字範圍從 min 到 max 的陣列
+      function randomArray(length, min, max) {
+        const arr = [];
+        for (let i = 0; i < length; i++) {
+          arr.push(randomNum(min, max));
+        }
+        return arr;
+      }
+
+      // 產生三個陣列，每個陣列有 6 個數字，範圍從 1 到 360
+      const arr1 = randomArray(6, 1, 360);
+      const arr2 = randomArray(6, 1, 360);
+      const arr3 = randomArray(6, 1, 360);
+
+      console.log(arr1);
+      console.log(arr2);
+      console.log(arr3);
+    </script>
+  </body>
+</html>
