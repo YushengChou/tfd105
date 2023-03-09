@@ -69,11 +69,14 @@
       }
 
       @keyframes roll {
-        from {
-          transform: rotateX(0) rotateY(0) rotateZ(0);
+        0% {
+          transform: rotateX(0) rotateY(0);
         }
-        to {
-          transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+        50% {
+          transform: rotateX(360deg) rotateY(360deg);
+        }
+        100% {
+          transform: rotateX(0) rotateY(0);
         }
       }
     </style>
@@ -100,7 +103,7 @@
       $("#dice").on("click", (e) => {
         $("#dice").toggleClass("paused");
       });
-
+      // 
     </script>
   </body>
 </html>
