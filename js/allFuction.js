@@ -148,3 +148,9 @@ const rps = (p1, p2) => {
   if (p1 === 'paper' && p2 === 'rock') return 'Player 1 won!';
   return 'Player 2 won!';
 };
+
+// 將接收到的字串單字反轉
+function reverseWords(str) {
+  // 切成陣列->反轉->合併->切成陣列->反轉->合併
+  return str.split('').reverse().join('').split(' ').reverse().join(' ')
+}
