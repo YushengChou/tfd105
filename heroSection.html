@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hero Section</title>
+		<style>
+			.container {
+				background-image: url("https://picsum.photos/500/300?random=1");
+				background-size: cover;
+				position: relative;
+				margin: 0 auto;
+				max-width: 1200px;
+				height: 50vh;
+			}
+			.text {
+				padding: 1rem 2rem;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				font-size: 8rem;
+				background-color: #fff;
+				color: #000;
+				/* 元素和父元素背景混合用法 */
+				mix-blend-mode: screen;
+			}
+		</style>
+  </head>
+  <body>
+		<div class="container">
+			<div class="text">NATURE</div>
+		</div>
+	</body>
+</html>

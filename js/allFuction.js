@@ -154,3 +154,43 @@ function reverseWords(str) {
   // 切成陣列->反轉->合併->切成陣列->反轉->合併
   return str.split('').reverse().join('').split(' ').reverse().join(' ')
 }
+
+// 根据名字和拥有者回应
+function greet (name, owner) {
+  return name === owner ? 'Hello boss' : 'Hello guest'
+}
+// 其他写法
+function greet (name, owner) {
+  return `Hello ${name==owner?'boss':'guest'}`
+}
+
+// 接收一串文字，返回该字串内最小单字的长度
+function findShort(s){
+  const arr = []
+  s.split(' ').forEach(function(item) {
+    arr.push(item.length)
+  })
+  return arr.sort((a,b) => a - b)[0]
+}
+// 最佳解
+function findShort(s){
+  return Math.min.apply(null, s.split(' ').map(w => w.length));
+}
+
+// 无条件舍去运用
+function litres(time) {
+  return Math.floor(time / 2)
+}
+
+// 将阵列中一堆单词合并成一个字串
+function smash (words) {
+  return words.join(' ')
+};
+
+// 收到一个阵列其长度至少大于4，返回将其最小的两个数字之和
+function sumTwoSmallestNumbers(numbers) {
+  // 将数组按升序排序
+  const sortedNumbers = numbers.sort((a, b) => a - b);
+  // 返回前两个数的和
+  return sortedNumbers[0] + sortedNumbers[1];
+}
