@@ -194,3 +194,169 @@ function sumTwoSmallestNumbers(numbers) {
   // 返回前两个数的和
   return sortedNumbers[0] + sortedNumbers[1];
 }
+
+// 收到一个数字字串，将数字小于5转成0，大于等于5转成1，并将其返回
+function fakeBin(x){
+  let res = ''
+  for (let i = 0; i < x.length; i++) {
+    if (x[i] < 5) {
+      res += 0
+    } else {
+      res += 1
+    }
+  }
+  return res
+}
+// 简洁写法
+function fakeBin(x) {
+  return x.split('').map(n => n < 5 ? 0 : 1).join('');
+}
+
+// 收到一个字串，使函數將打破駝峰式大小寫，在單詞之間使用空格。
+function solution(string) {
+  let res = ''
+  for (let i = 0; i < string.length; i++) {
+    if (!/[A-Z]/.test(string[i])) {
+      res += string[i]
+    } else {
+      res += (' ' + string[i])
+    }
+  }
+  return res
+}
+// 最佳解
+function solution(string) {
+  return(string.replace(/([A-Z])/g, ' $1'));
+}
+
+// 將字符串轉換為新字符串，若有重复转成")"否则"("，不区分大小写
+function duplicateEncode(word){
+  let res = ''
+  let str = word.toLowerCase()
+  for (let i = 0; i < str.length; i++) {
+    if (str.indexOf(str[i]) === str.lastIndexOf(str[i])) {
+      res += '('
+    } else {
+      res += ')'
+    }
+  }
+  return res
+}
+// 最佳解
+function duplicateEncode(word){
+  return word
+    .toLowerCase()
+    .split('')
+    .map( function (a, i, w) {
+      return w.indexOf(a) == w.lastIndexOf(a) ? '(' : ')'
+    })
+    .join('');
+}
+
+// 得到阵列中最小及最大值
+function minMax(arr){
+  return [Math.min(...arr), Math.max(...arr)]
+}
+
+// BMI
+function bmi(weight, height) {
+  let res = weight / Math.pow(height, 2)
+  if (res <= 18.5) {
+    return "Underweight"
+  } else if (res <= 25) {
+    return "Normal"
+  } else if (res <= 30) {
+    return "Overweight"
+  } else {
+    return "Obese"
+  }
+}
+
+// 判断阵列中字串长度=4的项目
+function friend(friends){
+  return friends.filter(item => item.length === 4)
+}
+
+// 计算租车费用
+// Every day you rent the car costs $40. If you rent the car for 7 or more days, you get $50 off your total. Alternatively, if you rent the car for 3 or more days, you get $20 off your total.
+function rentalCarCost(d) {
+  if (d >= 7) {
+    return d * 40 - 50
+  } else if (d >= 3 && d < 7) {
+    return d * 40 - 20
+  } else {
+    return d * 40
+  }
+}
+// 简短写法
+function rentalCarCost(d) {
+  return d * 40 - (d >= 7 ? 50 : (d >= 3 ? 20 : 0));
+}
+// 更清晰--一个function做一件事情
+function baseCost(days, rate) {
+  return days * rate;
+}
+function discountRate(days) {
+  if ( days >= 7 ) {
+    return 50;
+  }
+  else if ( days >= 3 ) {
+    return 20;
+  }
+  else {
+    return 0;
+  }
+}
+function rentalCarCost(days) {
+  return baseCost(days, 40) - discountRate(days);
+}
+
+// Write a function which takes a list of strings and returns each line prepended by the correct number.
+// The numbering starts at 1. The format is n: string. Notice the colon and space in between.
+var number=function(array){
+  let resArr = []
+  if (array.length > 0) {
+    for (let i = 0; i < array.length; i++) {
+      resArr.push(`${i + 1}: ${array[i]}`)
+    }
+    return resArr
+  } else {
+    return resArr
+  }
+}
+// 用map
+var number = function(array) {
+  return array.map(function (line, index) {
+    return (index + 1) + ": " + line;
+  });
+}
+// const number = array => array.map((n, i) => `${i + 1}: ${n}`);
+
+// 給定一個整數數組，找到出現奇數次的整數。永遠只有一個整數出現奇數次。
+// 返回該數組內出現基數次數的數字
+function findOdd(A) {
+  let obj = A.reduce(function(count, currentVal) {
+    return (
+      count[currentVal] ? ++count[currentVal] : (count[currentVal] = 1),
+      count
+    )
+  }, {})
+  let objKey = Object.keys(obj)
+  for (let i = 0; i < objKey.length; i++) {
+    if (obj[objKey[i]] % 2 != 0) {
+      return Number(objKey[i])
+    }
+  }
+}
+// 最佳解
+const findOdd = (xs) => xs.reduce((a, b) => a ^ b);
+// 参考
+function findOdd(arr) {
+  return arr.find((item, index) => arr.filter(el => el == item).length % 2)
+}
+
+// 實現一個函數，將兩個數字相加並以二進制形式返回它們的和。 轉換可以在添加之前或之後進行。
+// 返回的二進制數應該是一個字符串。
+function addBinary(a,b) {
+  return parseInt(a + b).toString(2)
+}
