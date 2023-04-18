@@ -360,3 +360,14 @@ function findOdd(arr) {
 function addBinary(a,b) {
   return parseInt(a + b).toString(2)
 }
+
+// 此函數測試該因子是否為另一值的因數。如果它是則返回 true，如果不是則返回 false。
+function checkForFactor (base, factor) {
+  return base % factor === 0 ? true : false
+  // return base % factor === 0
+}
+
+// 給定一個 4 邊形的長和寬，如果是正方形返回它的面積。 如果它是一個矩形返回它的周長。
+const areaOrPerimeter = function(l , w) {
+  return l === w ? l * w : (l + w) * 2
+};
