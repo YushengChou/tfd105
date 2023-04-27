@@ -49,7 +49,7 @@ function paperwork(n, m) {
 function feast(beast, dish) {
   let str1 = beast.slice(0, 1) + beast.slice(-1);
   let str2 = dish.slice(0, 1) + dish.slice(-1);
-  return str1 === str2 ? true : false;
+  return str1 === str2;
 }
 // 最佳解參考
 // return beast[0] === dish[0] && beast[beast.length - 1] === dish[dish.length - 1]
@@ -371,3 +371,70 @@ function checkForFactor (base, factor) {
 const areaOrPerimeter = function(l , w) {
   return l === w ? l * w : (l + w) * 2
 };
+
+// 判斷兩個數是否一個基數一個偶數，是返回true否則false
+function lovefunc(flower1, flower2){
+  return (flower1 + flower2) % 2 !== 0
+}
+// 参考
+function lovefunc(flower1, flower2){
+  return flower1 % 2 !== flower2 % 2;
+}
+
+// 判斷三個邊長是否能構成三角形
+function isTriangle(a,b,c) {
+  if ((a + b) > c && (a + c) > b && (b + c) > a) {
+    return true
+  } else {
+    return false
+  }
+}
+// 简写
+// return a + b > c && a + c > b && c + b > a;
+
+// 判斷是否受僱及休假狀態，受僱且沒休假才設置鬧鐘
+function setAlarm(employed, vacation){
+  return employed && !vacation
+}
+// return employed > vacation
+// 1 > 0 回true(受雇且没有休假)其他则为false
+
+// 您可能知道 Facebook 和其他頁面的“贊”系統。 人們可以“喜歡”博客文章、圖片或其他項目。 我們想要創建應顯示在此類項目旁邊的文本。
+function likes(names) {
+  if (names.length === 0) {
+    return "no one likes this"
+  } else if (names.length === 1) {
+    return `${names[0]} likes this`
+  } else if (names.length === 2) {
+    return `${names[0]} and ${names[1]} like this`
+  } else if (names.length === 3) {
+    return `${names[0]}, ${names[1]} and ${names[2]} like this`
+  } else {
+    return `${names[0]}, ${names[1]} and ${names.length - 2} others like this`
+  }
+}
+
+// 將數字拆解 ex: 12 -> '10 + 2', 70304 -> '70000 + 300 + 4'
+function expandedForm(num) {
+  let str = ''
+  for(let i = 0; i < num.toString().length; i++) {
+    if (i === 0) {
+      str += num.toString()[i] * (10 ** (num.toString().length - i - 1))
+    } else {
+      if (num.toString()[i] === '0') {
+        str += ''
+      } else {
+        str += " + " + num.toString()[i] * (10 ** (num.toString().length - i - 1))
+      }
+    }
+  }
+  return str
+}
+// best and clear
+const expandedForm = n => n.toString()
+                            .split("")
+                            .reverse()
+                            .map( (a, i) => a * Math.pow(10, i))
+                            .filter(a => a > 0)
+                            .reverse()
+                            .join(" + ");
