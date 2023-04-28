@@ -438,3 +438,10 @@ const expandedForm = n => n.toString()
                             .filter(a => a > 0)
                             .reverse()
                             .join(" + ");
+
+// 替換文字中所有的!為空字串
+function removeExclamationMarks(s) {
+  return s.replaceAll('!', '');
+  // 用正規表達式
+  // return s.replace(/!/g, '');
+}
