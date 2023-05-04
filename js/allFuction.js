@@ -445,3 +445,30 @@ function removeExclamationMarks(s) {
   // 用正規表達式
   // return s.replace(/!/g, '');
 }
+
+// 取得第一個字串並轉為數字
+function getAge(inputString){
+  return parseInt(inputString[0])
+}
+
+// 將得到的數字正轉負; 負轉正
+function opposite(number) {
+  return -number
+}
+
+// 將得到的字串大小寫轉換
+function toAlternatingCase (str) {
+  let arr = str.split('')
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] >= "A" && arr[i] <= "Z") {
+      arr[i] = arr[i].toLowerCase()
+    } else {
+      arr[i] = arr[i].toUpperCase()
+    }
+  }
+  return arr.join('')
+}
+// best
+String.prototype.toAlternatingCase = function () {
+  return this.split("").map(a => a === a.toUpperCase()? a.toLowerCase(): a.toUpperCase()).join('')
+}
