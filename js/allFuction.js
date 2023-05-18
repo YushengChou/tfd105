@@ -472,3 +472,20 @@ function toAlternatingCase (str) {
 String.prototype.toAlternatingCase = function () {
   return this.split("").map(a => a === a.toUpperCase()? a.toLowerCase(): a.toUpperCase()).join('')
 }
+
+// 計算字符串中所有出現的字符次數
+function count(string) {
+  return string.split('').reduce((counts,char)=>{
+    if(counts[char]){
+      counts[char]++
+    }else{
+      counts[char] = 1
+    }
+    return counts
+  },{})
+}
+
+// 您將獲得一個字符串列表。 您必須按字母順序對其進行排序，然後返回第一個值。返回值必須是一個字符串，每個字母之間有“***”。
+function twoSort(s) {
+  return s.sort()[0].split('').join('***')
+}
