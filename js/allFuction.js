@@ -489,3 +489,28 @@ function count(string) {
 function twoSort(s) {
   return s.sort()[0].split('').join('***')
 }
+
+// 檢查字符串是否具有相同數量的“x”和“o”。 該方法必須返回一個布林值並且不區分大小寫。 該字符串可以包含任何字符。
+function XO(str) {
+  let hasX = 0
+  let hasO = 0
+  for(let i = 0; i < str.length; i++) {
+    if(str[i] === 'x' || str[i] === 'X') {
+      hasX += 1
+    }
+    if(str[i] === 'o' || str[i] === 'O') {
+      hasO += 1
+    }
+  }
+  if (hasX === hasO) {
+    return true
+  } else {
+    return false
+  }
+}
+// best and clever
+function XO(str) {
+  let x = str.match(/x/gi);
+  let o = str.match(/o/gi);
+  return (x && x.length) === (o && o.length);
+}
