@@ -514,3 +514,18 @@ function XO(str) {
   let o = str.match(/o/gi);
   return (x && x.length) === (o && o.length);
 }
+
+// 接收時分秒回傳毫秒
+function past(h, m, s){
+  return h * 60 * 60 * 1000 + m * 60 * 1000 + s * 1000
+}
+
+// (正方形)該方法在作為參數傳遞的那個之後找到下一個完整的完美平方，如果參數本身不是完全正方形，則應返回 -1。 您可以假設該參數是非負的。
+function findNextSquare(sq) {
+  return Number.isInteger(Math.sqrt(sq)) ?  Math.pow(Math.sqrt(sq) + 1, 2) : -1
+}
+
+// 編寫一個函數將姓名轉換為首字母。 這個型嚴格採用兩個單詞，它們之間有一個空格。輸出應該是兩個大寫字母，用點分隔它們。
+function abbrevName(name){
+  return name.split(' ')[0][0].toUpperCase() + '.' + name.split(' ')[1][0].toUpperCase()
+}
