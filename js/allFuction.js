@@ -529,3 +529,52 @@ function findNextSquare(sq) {
 function abbrevName(name){
   return name.split(' ')[0][0].toUpperCase() + '.' + name.split(' ')[1][0].toUpperCase()
 }
+
+// 編寫一個函數，它接受一個數字數組並返回數字的總和。 數字可以是負數或非整數。 如果數組不包含任何數字，則應返回 0。
+function sum (numbers) {
+  "use strict";
+  return numbers.reduce((a, c) => a + c, 0)
+};
+
+// 考慮一種將語言存儲為數據庫（例如對象）的方法。 下面列出了語言，您可以復制和粘貼！
+// 編寫一個“歡迎”函數，它接受一個參數“語言”（總是一個字符串），並返回一個問候語——如果你的數據庫中有它的話。 如果語言不在數據庫中，或者在輸入無效的情況下，它應該默認為英語。
+function greet(language) {
+	switch(language) {
+    case 'english':
+      return 'Welcome'
+    case 'czech':
+      return 'Vitejte'
+    case 'danish':
+      return 'Velkomst'
+    case 'dutch':
+      return 'Welkom'
+    case 'estonian':
+      return 'Tere tulemast'
+    case 'finnish':
+      return 'Tervetuloa'
+    case 'flemish':
+      return 'Welgekomen'
+    case 'french':
+      return 'Bienvenue'
+    case 'german':
+      return 'Willkommen'
+    case 'irish':
+      return 'Failte'
+    case 'italian':
+      return 'Benvenuto'
+    case 'latvian':
+      return 'Gaidits'
+    case 'lithuanian':
+      return 'Laukiamas'
+    case 'polish':
+      return 'Witamy'
+    case 'spanish':
+      return 'Bienvenido'
+    case 'swedish':
+      return 'Valkommen'
+    case 'welsh':
+      return 'Croeso'
+    default:
+      return 'Welcome'
+  }
+}
