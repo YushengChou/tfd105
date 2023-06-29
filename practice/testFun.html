@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            color: blue;
+        }
+        h1::selection {
+            color: yellow;
+            background: green;
+        }
+        .choose_color {
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>H1-TITLE</h1>
+    <input class="choose_color" type="color" value="#00ff00" id="Color">
+    <input type="text" id="ChooseColor">
+    
+    <script src="./js/allFuction.js"></script>
+    <script>
+        console.log('testFun')
+        document.querySelector('#Color').addEventListener('change', function() {
+            document.querySelector('#ChooseColor').value = document.querySelector('#Color').value
+        })
+        document.querySelector('#ChooseColor').addEventListener('change', function() {
+            document.querySelector('#Color').value = document.querySelector('#ChooseColor').value
+        })
+    </script>
+</body>
+</html>
