@@ -578,3 +578,61 @@ function greet(language) {
       return 'Welcome'
   }
 }
+
+// 合併資料
+const EnglishClassData = [
+  { id: 1, name: "Terry", phone: "0900123123", age: 37 },
+  { id: 2, name: "Jenny", phone: "0900333222", age: 25 },
+  { id: 3, name: "Mark", phone: "0900223223" },
+];
+const MathClassData = [
+  { id: 2, name: "Jenny Lee", phone: "0900333222" },
+  { id: 3, name: "Mark Lu", phone: "0900223223", gender: "male" },
+  { id: 4, name: "Penny", gender: "female" },
+];
+// 預期會產出
+[
+  { id: 1, name: "Terry", phone: "0900123123", age: 37 },
+  { id: 2, name: "Jenny Lee", phone: "0900333222", age: 25 },
+  { id: 3, name: "Mark Lu", phone: "0900223223", gender: "male" },
+  { id: 4, name: "Penny", gender: "female" },
+];
+const mergedData = [];
+// 合并 EnglishClassData 数组中的对象
+EnglishClassData.forEach((englishObj) => {
+  const mergedObj = Object.assign({}, englishObj);
+  const matchingMathObj = MathClassData.find((mathObj) => mathObj.id === englishObj.id);
+  if (matchingMathObj) {
+    Object.assign(mergedObj, matchingMathObj);
+  }
+  mergedData.push(mergedObj);
+});
+// 将 MathClassData 中未包含在 EnglishClassData 中的对象添加到 mergedData
+MathClassData.forEach((mathObj) => {
+  const matchingEnglishObj = mergedData.find((mergedObj) => mergedObj.id === mathObj.id);
+  if (!matchingEnglishObj) {
+    mergedData.push(mathObj);
+  }
+});
+console.log(mergedData);
+
+// 隨機抽五顆，重複一百次
+const ballList = [1, 1, 1, 1, 0, 0, 0, 0, 0, 0];
+// 隨機數方法
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+function getRandomArr() {
+  let cloneBallList = ballList.slice();
+  let randomArr = []
+  for (let i = 0; i < 5; i++) {
+    const randomIndex = getRandomInt(cloneBallList.length)
+    const selectBall = cloneBallList.splice(randomIndex, 1)[0]
+    randomArr.push(selectBall)
+  }
+  return randomArr.join(',')
+}
+for (let i = 0; i < 100; i++) {
+  const RandomArr = getRandomArr()
+  console.log(RandomArr);
+}
